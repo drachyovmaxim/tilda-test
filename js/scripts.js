@@ -16,17 +16,11 @@
 //   $('#myCarousel3450857').bcSwipe({ threshold: 20 });
 // });
 
-jQuery(document).ready(function($) {
-
-var myElement = document.getElementById('myCarousel3450857');
-var mc = new Hammer(myElement);
-
-mc.on("swipeleft", function(ev) {
-$('#myCarousel3450857').carousel('next');
-});
-
-mc.on("swiperight", function(ev) {
-$('#myCarousel3450857').carousel('prev');
-});
-
-});
+$(document).ready(function() {  
+$('#myCarousel3450857').hammer().on('swipeleft', function(){
+$(this).carousel('next'); 
+})
+$('#myCarousel3450857').hammer().on('swiperight', function(){
+$(this).carousel('prev'); 
+})
+}); 
