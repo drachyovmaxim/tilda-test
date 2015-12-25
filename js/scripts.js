@@ -35,7 +35,7 @@ $(document).ready(function() {
     swipeRight: function() {
       $(this).parent().carousel('prev'); 
     },
-    threshold: 60,
+    threshold: 10,
     preventDefaultEvents: false,
     allowPageScroll: "vertical"
   });
