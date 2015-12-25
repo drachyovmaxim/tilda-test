@@ -29,10 +29,10 @@
 
 $(document).ready(function() { 
   $("#myCarousel3459946, #myCarousel3459919").swipe( {
-    swipeLeft:function(event, direction, distance, duration, fingerCount) {
+    swipeLeft:function(event, direction, distance, duration) {
       $(this).parent().carousel('next'); 
     },
-    swipeRight: function() {
+    swipeRight: function(event, direction, distance, duration) {
       $(this).parent().carousel('prev'); 
     },
     threshold: 10,
