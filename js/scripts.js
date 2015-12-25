@@ -36,6 +36,6 @@ $(document).ready(function() {
       $(this).parent().carousel('prev'); 
     },
     threshold: 40,
-    allowPageScroll: vertical,
+    allowPageScroll: 'vertical'
   });
 });
