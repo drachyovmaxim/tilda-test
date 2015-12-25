@@ -28,7 +28,7 @@
 // });
 
 $(document).ready(function() { 
-  $("#myCarousel3459946, #myCarousel3459919").swipe( {
+  $("#myCarousel3459946 .carousel-inner, #myCarousel3459919 .carousel-inner").swipe( {
     swipeLeft:function(event, direction, distance, duration) {
       $(this).parent().carousel('next'); 
     },
