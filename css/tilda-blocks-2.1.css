@@ -510,8 +510,8 @@
 .carousel-inner > .item {
   position: relative;
   display: none;
-  -webkit-transition: 0.5s ease-in-out left;
-  transition: 0.5s ease-in-out left;
+  -webkit-transition: 0.9s ease-in-out left;
+  transition: 0.9s ease-in-out left;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -1376,6 +1376,33 @@
   padding-top: 10px;
   padding-bottom: 4px;
 }
+.t050 .centeredSection {
+  text-align: center;
+}
+.t050 .leftSection {
+  text-align: left;
+}
+.t050 .rightSection {
+  text-align: right;
+}
+.t050 h3 {
+  text-transform: uppercase;
+  padding-top: 9px;
+  padding-bottom: 93px;
+}
+.t050 h5 {
+  padding-top: 50px;
+  padding-bottom: 9px;
+}
+.t050 p {
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: #000000;
+  text-align: center;
+  padding-top: 37px;
+  padding-bottom: 4px;
+}
 .t056 .centeredSection {
   text-align: center;
 }
@@ -2133,6 +2160,47 @@
 }
 @media screen and (max-width: 320px) {
   .t215 .blockimg {
+    height: 320px;
+  }
+}
+.t214 .row {
+  clear: both;
+}
+.t214 .blockimg {
+  max-width: 360px;
+  height: 360px;
+  margin-bottom: 20px;
+}
+.t214 .blocktitle {
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 14px;
+}
+.t214 .blockdescr {
+  font-family: 'Georgia', serif;
+  color: #000000;
+  font-size: 14px;
+  line-height: 24px;
+  padding-bottom: 14px;
+}
+.t214 .textwrapper {
+  margin-bottom: 10px;
+  text-align: left;
+}
+@media screen and (max-width: 1200px) {
+  .t214 .blockimg {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .t214 .blockimg {
+    height: 360px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .t214 .blockimg {
     height: 320px;
   }
 }
