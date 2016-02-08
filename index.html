@@ -268,12 +268,8 @@
 <script type="text/javascript">
   
   function t280_popup(){
-    $('.t280-burger, .t280-menu, .t280-menu__bg').click(function(){
+    $('.t280-burger, .t280-menu__item').click(function(){
       $('body').toggleClass('t280_opened');
-    });
-
-    $('.t280-menu__item').click(function(){
-      $('body').removeClass('t280_opened');
     });
     
     var div = $(".t280-menu").height();
