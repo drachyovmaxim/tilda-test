@@ -271,6 +271,10 @@
     $('.t280-burger, .t280-menu, .t280-menu__bg').click(function(){
       $('body').toggleClass('t280_opened');
     });
+
+    $('.t280-menu__item').click(function(){
+      $('body').removeClass('t280_opened');
+    });
     
     var div = $(".t280-menu").height();
     var bottomheight = $(".t280-bottom").height();
@@ -2166,4 +2170,4 @@ $(document).ready(function() {
 	
 	
 </body>
-</html>
+</html>
