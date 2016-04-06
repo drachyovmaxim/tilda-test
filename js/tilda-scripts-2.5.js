@@ -1508,7 +1508,7 @@ $(document).ready(function() {
     },
     threshold: 50,
     preventDefaultEvents: false,
-    allowPageScroll: "horizontal"
+    allowPageScroll: "none"
   });
 });
 
