@@ -1499,16 +1499,16 @@
 
 
 $(document).ready(function() { 
-  $(".carousel, .t-carousel").swipe( {
+  $(".carousel, .t-carousel__slides").swipe( {
     swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
       $(this).parent().carousel('next'); 
     },
     swipeRight: function(event, direction, distance, duration, fingerCount, fingerData) {
       $(this).parent().carousel('prev'); 
     },
-    threshold: 30,
+    threshold: 60,
     preventDefaultEvents: false,
-    allowPageScroll: false
+    allowPageScroll: "horizontal"
   });
 });
 
