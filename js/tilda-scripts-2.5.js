@@ -1500,13 +1500,13 @@
 
 $(document).ready(function() { 
   $(".carousel-inner, .t-carousel__slides").swipe( {
-    swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+    swipeLeft:function(event, direction, distance, duration) {
       $(this).parent().carousel('next'); 
     },
-    swipeRight: function(event, direction, distance, duration, fingerCount, fingerData) {
+    swipeRight: function(event, direction, distance, duration) {
       $(this).parent().carousel('prev'); 
     },
-    threshold: 60,
+    threshold: 50,
     preventDefaultEvents: false,
     allowPageScroll: "horizontal"
   });
