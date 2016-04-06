@@ -1506,9 +1506,9 @@ $(document).ready(function() {
     swipeRight: function(event, direction, distance, duration) {
       $(this).parent().carousel('prev'); 
     },
-    threshold: 20,
+    threshold: 30,
     preventDefaultEvents: false,
-    allowPageScroll: "vertical"
+    allowPageScroll: false
   });
 });
 
