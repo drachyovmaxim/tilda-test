@@ -1499,7 +1499,7 @@
 
 
 $(document).ready(function() { 
-  $(".carousel, .t-carousel__slides").swipe( {
+  $(".carousel-inner, .t-carousel__slides").swipe( {
     swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
       $(this).parent().carousel('next'); 
     },
