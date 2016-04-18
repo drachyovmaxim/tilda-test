@@ -445,6 +445,12 @@
   background: #f5f4f0;
 }
 
+.te-marketing__grid:after, .te-marketing__grid:before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .te-marketing__grid__item {
   display: block;
   max-width: 960px;
@@ -543,7 +549,118 @@
   width: 45%;
 }
 
+.te-marketing__grid__col__mobile {
+  display: none;
+}
 
+
+@media screen and (max-width: 960px) {
+  .te-marketing__grid__title {
+    font-size: 50px;
+  }
+
+  .te-marketing__grid__textwrapper {
+    padding-left: 50px;
+  }
+
+  .te-marketing__grid__item {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .te-marketing__grid__title {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 18px;
+  }
+
+  .te-marketing__grid__smalltitle {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 17px;
+  }
+
+  .te-marketing__grid__descr {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .te-marketing__grid__textwrapper {
+    padding: 40px 0 40px 40px;
+  }
+
+  .te-marketing__grid__item {
+    min-height: 380px;
+  }
+
+  .te-marketing__grid__imgwrapper {
+    padding: 0 30px;
+  }
+
+  .te-marketing__grid__btn {
+    font-size: 14px;
+    padding: 13px 22px 13px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .te-marketing__grid__textwrapper {
+    padding: 30px 0 30px 30px;
+  }
+
+  .te-marketing__grid__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .te-marketing__grid__smalltitle {
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 12px;
+  }
+
+  .te-marketing__grid__descr {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+
+  .te-marketing__grid__item {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .te-marketing__grid__col {
+    width: 100%;
+    text-align: center;
+  }
+
+  .te-marketing__grid__col_right {
+    display: none;
+  }
+
+  .te-marketing__grid__col__mobile {
+    display: block;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .te-marketing__grid__imgwrapper {
+    padding: 50px 30px 30px;
+  }
+
+  .te-marketing__grid__textwrapper {
+    padding: 0 30px 30px;
+  }
+
+  .te-marketing__grid__check {
+    display: none;
+  }
+}
 
 
 
