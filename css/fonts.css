@@ -1,0 +1,30 @@
+@font-face {
+font-family: 'tfutura';
+src: url('https://images.tildacdn.info/125fa7cd-e930-4607-85b1-abea9b6ebfac/f300.woff') format('woff');
+font-weight: 300;
+font-style: light;
+}
+@font-face {
+font-family: 'tfutura';
+src: url('https://images.tildacdn.info/867998d3-8566-488c-a0dd-ca1c47b5140c/f400.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'tfutura';
+src: url('https://images.tildacdn.info/8d9093ea-0cf0-4a47-a9e4-bf6562bf3497/f500.woff') format('woff');
+font-weight: 500;
+font-style: medium;
+}
+@font-face {
+font-family: 'tfutura';
+src: url('https://images.tildacdn.info/4eaa0cc4-4e05-4ce7-ac4f-9af79620576d/f600.woff') format('woff');
+font-weight: 600;
+font-style: semibold;
+}
+@font-face {
+font-family: 'tfutura';
+src: url('https://images.tildacdn.info/4eaa0cc4-4e05-4ce7-ac4f-9af79620576d/f600.woff') format('woff');
+font-weight: 700;
+font-style: bold;
+}

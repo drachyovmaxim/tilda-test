@@ -1,0 +1,554 @@
+/*popup*/
+.te-popup {
+	-webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  position: fixed;
+  display: none;
+  width: 100%;
+  z-index: 1500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: transparent;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+/*.te-body_popup-opened .te-popup {
+	opacity: 1;
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	overflow: scroll;
+}*/
+
+.te-popup__overlay {
+	background: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.te-body_popup-opened {
+	overflow: hidden;
+}
+
+.te-popup__wrap {
+	max-width: 500px;
+	margin: 100px auto;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+
+.te-popup__header {
+	background: #ffee00;
+	padding: 45px 15px 37px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.te-popup__info {
+	padding: 0 15px;
+}
+
+.te-popup__description {
+	text-align: center;
+	font-size: 26px;
+	color: rgba(0,0,0,.7);
+	font-weight: 300;
+  max-width: 400px;
+  margin: 40px auto;
+  line-height: 30px;
+}
+
+.te-popup__buttons {
+	list-style: none;
+}
+
+.te-popup__btn {
+	display: block;
+	padding: 16px;
+	background: #eee;
+	color: #fff;
+	border-radius: 100px;
+	max-width: 400px;
+	margin: 0 auto 20px;
+	font-size: 18px;
+	font-weight: 400;
+	-webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.te-popup__btn__icon {
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.te-popup__btn__icon img {
+	display: block;
+	height: 15px;
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.te-popup__btn span {
+  width: 63%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.te-popup__btn:hover {
+	opacity: .8;
+}
+
+.te-popup__btn-fb {
+	background: #425697;
+}
+
+.te-popup__btn-tw {
+	background: #41acea;
+}
+
+.te-popup__btn-vk {
+	background: #57799e;
+}
+
+.te-popup__btn-google {
+	background: #dd4b39;
+}
+
+.te-popup__btn-google img {
+	margin-right: 14px;
+}
+
+.te-popup__hint {
+	font-size: 14px;
+	border-top: 1px solid #cecece;
+	padding: 27px 15px 26px;
+	color: rgba(0,0,0,.7);
+	margin-top: 52px;
+}
+
+.te-popup__close {
+	width: 16px;
+	height: 16px;
+	position: fixed;
+	right: 15px;
+	top: 15px;
+}
+
+.te-popup__close img {
+	display: block;
+	width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+	.te-popup__wrap {
+		position: relative;
+		top: auto;
+		margin-top: 50px;
+		max-width: 290px;
+	}
+
+	.te-popup__header {
+		font-size: 16px;
+		padding: 28px 15px 21px;
+	}
+
+	.te-popup__description {
+		text-align: center;
+    font-size: 18px;
+    color: rgba(0,0,0,.7);
+    font-weight: 300;
+    max-width: 400px;
+    margin: 21px auto 20px;
+    line-height: 20px;
+	}
+
+	.te-popup__btn {
+		font-size: 14px;
+		padding: 11px 15px 10px;
+		margin-bottom: 10px;
+	}
+
+	.te-popup__btn__icon img {
+		height: 11px;
+	}
+
+	.te-popup__btn span {
+		margin-left: -5px;
+	}
+
+	.te-popup__btn__icon {
+		width: 19%;
+	}
+
+	.te-popup__hint {
+		font-size: 12px;
+    border-top: 1px solid #cecece;
+    padding: 13px 15px 12px;
+    color: rgba(0,0,0,.7);
+    margin-top: 23px;
+	}
+}
+
+/*registration*/
+.te-registration__header {
+	background: #ffee00;
+	padding: 43px 15px 39px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.te-registration__form {
+  text-align: center;
+  padding: 15px 0;
+  margin: 0 auto;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  margin-top: -86px;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.te-form-group {
+	padding: 0 15px;
+}
+
+.te-registration__label, .te-registration__input, .te-registration__btn {
+	display: block;
+}
+
+.te-registration__label {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  color: rgba(0,0,0,.7);
+  margin-bottom: 33px;
+}
+
+.te-registration__input {
+	width: 100%;
+	border: 1px solid #eee;
+	color: #222;
+	background: transparent;
+	padding: 12px 0 10px;
+	font-size: 48px;
+	text-align: center;
+	font-weight: 300;
+  display: inline-block;
+  max-width: 600px;
+}
+
+.te-registration__btn {
+	display: block;
+	padding: 16px;
+	background: #ffee00;
+	color: #222;
+	border-radius: 100px;
+	min-width: 200px;
+	text-align: center;
+	margin: 38px auto 0;
+	font-size: 18px;
+	font-weight: 400;
+	-webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.te-registration__btn:hover {
+	opacity: .7;
+}
+@media screen and (max-width: 600px) {
+	.te-registration__label {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.te-registration__input {
+		font-size: 28px;
+	}
+	.te-registration__btn {
+		font-size: 14px;
+		margin-top: 30px;
+	}
+	.te-registration__form {
+		margin-top: -66px;
+	}
+}
+
+/*subscribe*/
+.te-subscribe__container {
+	background-size: cover;
+  padding: 70px 15px;
+  background-position: center;
+}
+
+.te-subscribe__wrapper {
+	max-width: 1081px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.te-subscribe__col-left {
+	width: 52%;
+	margin-right: 8%;
+}
+
+.te-subscribe__col-right {
+	width: 40%;
+	color: #fff;
+}
+
+.te-subscribe__col-left, .te-subscribe__col-right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.te-subscribe__col-left img {
+	width: 100%;
+	display: block;
+}
+
+.te-subscribe__title {
+	text-align: center;
+	color: #ffee00;
+	font-size: 56px;
+	font-weight: 300;
+	margin-bottom: 65px;
+}
+
+.te-subscribe__description {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.44;
+	margin-bottom: 50px;
+}
+
+.te-subscribe__description strong {
+	font-weight: 700;
+}
+
+.te-subscribe__buttons {
+	margin-bottom: 50px;
+}
+
+.te-subscribe__btn {
+	font-size: 18px;
+	background: #ffee00;
+	border-radius: 100px;
+	padding: 16px 26px 14px;
+	display: inline-block;
+	margin-right: 16px;
+}
+
+.te-subscribe__btn_white {
+	background: #fff;
+}
+
+.te-subscribe__hint {
+	font-size: 16px;
+	color: #737373;
+	max-width: 380px;
+	line-height: 1.3;
+}
+
+.te-subscribe__hint a {
+	color: #ccbe00;
+}
+
+/*footer*/
+.te-footer__container {
+	background: #000;
+	text-align: center;
+	padding: 60px 15px 54px;
+}
+
+.te-footer__wrapper {
+	max-width: 1085px;
+  margin: 0 auto;
+}
+
+.te-footer__text {
+	color: rgba(255,255,255,.6);
+	line-height: 1.25;
+	margin-bottom: 6px;
+}
+
+.te-footer__text a {
+	color: #ffee00;
+}
+
+.te-footer__logo {
+	width: 80px;
+	margin: 0 auto 20px;
+}
+
+/*profile*/
+.te-profile__wrapper {
+	max-width: 600px;
+	margin: 100px auto;
+	text-align: center;
+}
+
+.te-profile__wrapper .te-registration__label {
+	margin-bottom: 15px;
+}
+
+.te-profile__wrapper .te-form-group {
+	margin-bottom: 40px;
+}
+
+.te-profile__cancel {
+	font-size: 16px;
+	color: #888;
+	margin-top: 20px;
+	display: block;
+}
+
+@media screen and (max-width: 600px) {
+	.te-profile__wrapper {
+		margin-top: 40px;
+	}
+}
+
+
+.te-marketing__grid {
+  padding: 60px 20px;
+  background: #f5f4f0;
+}
+
+.te-marketing__grid__item {
+  display: block;
+  max-width: 960px;
+  margin: 0 auto 30px;
+  background: #fff;
+  min-height: 500px;
+  position: relative;
+}
+
+.te-marketing__grid__item:last-child {
+  margin-bottom: 0;
+}
+
+.te-marketing__grid__item_gray {
+  background: #e1e1e1;
+}
+
+.te-marketing__grid__title {
+  font-size: 55px;
+  line-height: 50px;
+  letter-spacing: -1px;
+  color: #222;
+  margin-bottom: 26px;
+}
+
+.te-marketing__grid__smalltitle {
+  font-size: 30px;
+  line-height: 33px;
+  letter-spacing: -1px;
+  color: #898989;
+  font-weight: 100;
+  margin-bottom: 23px;
+}
+
+.te-marketing__grid__descr {
+  color: #555;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.te-marketing__grid__btn {
+  border: 2px solid #222;
+  padding: 16px 28px 15px;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 100px;
+  display: inline-block;
+  -webkit-transition: all ease-in-out .2s;
+  -moz-transition: all ease-in-out .2s;
+  -o-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+  cursor: pointer;
+}
+
+.te-marketing__grid__link:hover .te-marketing__grid__btn {
+  background: #222;
+  color: #fff;
+}
+
+.te-marketing__grid__check {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.te-marketing__grid__textwrapper {
+  padding: 60px 0 60px 60px;
+}
+
+.te-marketing__grid__imgwrapper {
+  padding: 0 40px 0 30px;
+}
+
+.te-marketing__grid__img {
+  display: block;
+  width: 100%;
+}
+
+.te-marketing__grid__col {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.te-marketing__grid__col_left {
+  width: 54%;
+}
+
+.te-marketing__grid__col_right {
+  width: 45%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
