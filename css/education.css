@@ -509,6 +509,12 @@
 .te-marketing__grid__check {
   display: inline-block;
   vertical-align: middle;
+  margin-left: 16px;
+}
+
+.te-marketing__grid__check__img {
+  display: block;
+  width: 100%;
 }
 
 .te-marketing__grid__textwrapper {
