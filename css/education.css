@@ -662,6 +662,47 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .te-marketing__grid__col__mobile {
+    display: block;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .te-marketing__grid__imgwrapper {
+    padding: 50px 30px 30px;
+  }
+
+  .te-marketing__grid__textwrapper {
+    padding: 0 20px 24px;
+  }
+
+  .te-marketing__grid__smalltitle {
+    margin-bottom: 10px;
+  }
+
+  .te-marketing__grid__check {
+    display: none;
+  }
+
+  .te-marketing__grid__title {
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  .te-marketing__grid__descr {
+    margin-bottom: 18px;
+  }
+
+  .te-marketing__grid__imgwrapper {
+    padding: 30px 20px 20px;
+  }
+
+  .te-marketing__grid__col__mobile {
+    max-width: 200px;
+  }
+}
+
 
 
 
