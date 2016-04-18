@@ -679,6 +679,8 @@
 
   .te-marketing__grid__smalltitle {
     margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 21px;
   }
 
   .te-marketing__grid__check {
@@ -700,6 +702,11 @@
 
   .te-marketing__grid__col__mobile {
     max-width: 200px;
+  }
+
+  .te-marketing__grid__btn {
+    font-size: 13px;
+    padding: 13px 22px 12px;
   }
 }
 
