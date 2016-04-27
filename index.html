@@ -1,447 +1,164 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Верстка сайта</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" >
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/education.css">
-	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
-	<link href="https://images.tildacdn.info/a45f8109-6271-46fb-8772-48315f137cb0/tfutura.css" rel="stylesheet">
-
-	<script src="js/jquery-1.11.3.js"></script>
-	<script src="js/popup.js"></script>
-	<!--[if lt IE 9]>
-	<script src="js/html5.js"></script>
-	<![endif]-->
-
-
-</head>
-<body>
-<div class="te-header__wrapper">
-	<ul class="te-header__nav">
-		<li class="te-header__nav__item">
-			<a class="te-logo" href="">
-				<img class="te-logo__waves" src="images/t-menu__waves.png">
-				<img class="te-logo__img" src="images/t-menu__logo-white.png">
-				<span class="te-logo__name">Tilda education</span>
-			</a>
-		</li>
-		<li class="te-header__nav__item">
-			<div class="te-header__dropdown">
-				<img class="te-header__dropdown__arrow" src="images/nav-arrow.svg">
-				<div class="te-header__dropdown__link">
-					<span>3. Дизайн мышление. Гайд по процессу</span>
-					<div class="te-header__dropdown__link__name">Лекции</div>
-					<img class="te-header__dropdown__img_black" src="images/close_black.svg">
-					<img class="te-header__dropdown__img" src="images/content.svg">
-				</div>
-				<div class="te-header__dropdown__container">
-					<div class="te-header__dropdown__wrapper">
-						<h4 class="te-header__dropdown__title">Глава 1</h4>
-						<ul>
-							<li class="te-header__dropdown__item">
-								<a href="">
-									<div class="te-header__dropdown__item__number">1</div>
-									Гайд по процессу. Дизайн мышление
-								</a>
-							</li>
-						</ul>
-						<h4 class="te-header__dropdown__title">Глава 2</h4>
-						<ul>
-							<li class="te-header__dropdown__item te-header__dropdown__item_active">
-								<a href="">
-									<div class="te-header__dropdown__item__number">2</div>
-									Дизайн мышление. Гайд по процессу
-								</a>
-							</li><li class="te-header__dropdown__item">
-								<a href="">
-									<div class="te-header__dropdown__item__number">3</div>
-									Эмпатия
-								</a>
-							</li><li class="te-header__dropdown__item">
-								<a href="">
-									<div class="te-header__dropdown__item__number">3</div>
-									Актуальные мировые стандарты дизайна сайтов
-								</a>
-							</li><li class="te-header__dropdown__item">
-								<a href="">
-									<div class="te-header__dropdown__item__number">4</div>
-									Развитие визуального вкуса и получение опыта
-								</a>
-							</li>
-						</ul>
-						<h4 class="te-header__dropdown__title">Глава 3</h4>
-						<ul>
-							<li class="te-header__dropdown__item">
-								<a href="">
-									<div class="te-header__dropdown__item__number">5</div>
-									Дизайн мышление. Гайд по процессу
-								</a>
-							</li><li class="te-header__dropdown__item">
-								<a href="">
-									<div class="te-header__dropdown__item__number">6</div>
-									Эмпатия
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</li>
-	</ul>
-	<div class="te-header__userbar">
-		<div class="te-header__userbar__item">
-			<div class="te-header__dropdown te-header__bookmars">
-				<div class="te-header__bookmarks__link">
-					<img class="te-header__bookmark__img" src="images/bookmark.svg">
-					<img class="te-header__bookmark__img_black" src="images/close_black.svg">
-					<span>Закладки</span>
-				</div>
-				<div class="te-header__dropdown__container">
-					<div class="te-header__dropdown__wrapper">
-						<ul>
-							<li class="te-header__dropdown__item">
-								<a class="te-header__bookmark__link" href="">
-									<div class="te-header__bookmark__title">Дизайн мышление. Гайд по процессу</div>
-									<div class="te-header__bookmark__descr">Как происходит дизайн мышление.</div>
-								</a>
-							</li><li class="te-header__dropdown__item">
-								<a class="te-header__bookmark__link" href="">
-									<div class="te-header__bookmark__title">Антропия</div>
-									<div class="te-header__bookmark__descr">Закладка №6</div>
-								</a>
-							</li><li class="te-header__dropdown__item">
-								<a class="te-header__bookmark__link" href="">
-									<div class="te-header__bookmark__title">Дизайн мышление. Гайд по процессу</div>
-									<div class="te-header__bookmark__descr">Как происходит дизайн мышление.</div>
-								</a>
-							</li><li class="te-header__dropdown__item">
-								<a class="te-header__bookmark__link" href="">
-									<div class="te-header__bookmark__title">Антропия</div>
-									<div class="te-header__bookmark__descr">Закладка №6</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div><div class="te-header__userbar__item">
-			<div class="te-header__usermenu">
-				<div class="te-header__usermenu__link">
-					<div class="te-header__usermenu__avatar" style="background-image: url('images/face.jpg');"></div>
-				</div>
-				<ul class="te-header__usermenu__wrapper">
-					<li class="te-header__usermenu__item">
-						<a href="">Дашборд</a>
-					</li><li class="te-header__usermenu__item">
-						<a href="">Профиль</a>
-					</li><li class="te-header__usermenu__item">
-						<a href="">Выйти</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="te-grid__container">
-	<div class="te-grid__topslide" style="background-image: url(images/grid-bg.jpg);">
-		<div class="te-grid__topslide__center">
-			<h1 class="te-grid__topslide__title">Принципы дизайна в Digital</h1>
-			<p class="te-grid__topslide__descr">Пройдя курс, вы узнаете, из каких этапов состоит работа над дизайном в вебе, освоете базовую теорию дизайна, получите порцию вдохновения, хорошего настроения, и разовьете визуальный вкус.</p>
-			<div class="te-grid__topslide__buttons">
-				<a class="te-subscribe__btn" href="">Купить курс</a>
-				<a class="te-subscribe__btn te-subscribe__btn_white" href="">Подробно о курсе</a>
-			</div>
-		</div>
-		<div class="te-grid__topslide-arrow__wrapper">
-			<div class="te-grid__topslide-arrow"></div>
-		</div>
-	</div>
-	<div class="te-grid__faq">
-		<div class="te-grid__wrapper">
-			<h1 class="te-grid__faq__title">Курс Tilda Education — это:</h1>
-			<ul class="te-grid__faq__numbers">
-				<li class="te-grid__faq__col">
-					<div class="te-grid__faq__number">20</div>
-					<div class="te-grid__faq__descr">Лекций на актуальные темы, отвечаютщие на конкретный вопрос: «как»</div>
-				</li><li class="te-grid__faq__col">
-					<div class="te-grid__faq__number">36</div>
-					<div class="te-grid__faq__descr">Часов чтения руководства, которые отвечают на конкретный вопрос: «как»</div>
-				</li><li class="te-grid__faq__col">
-					<div class="te-grid__faq__number">7</div>
-					<div class="te-grid__faq__descr">Авторов, признанных профессионалов индустрии</div>
-				</li>
-			</ul>
-			<p class="te-grid__faq__info">Мы создали библиотеку знаний по веб-дизайну и онлайн-журналистике. Учебник нового формата, в котором знания и опыт, накопленные за 15 лет работы в вебе, систематизированы и упакованы в материалы, написанные простым языком. Весь контент оригинальный и пополняется.</p>
-			<div class="te-grid__faq__nav">
-				<span>Содержание курса</span>
-				<div class="te-grid__faq__arrow"></div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div class="te-marketing__grid">
-		<div class="te-marketing__grid__item">
-			<a class="te-marketing__grid__link" href="">
-				<div class="te-marketing__grid__content">
-					<div class="te-marketing__grid__col__mobile">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/1.svg">
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_left">
-						<div class="te-marketing__grid__textwrapper">
-							<div class="te-marketing__grid__title">Из чего состоит интернет-маркетинг</div>
-							<div class="te-marketing__grid__smalltitle">Понятие интенет-маркетинга, инструменты и тренды продвижения</div>
-							<div class="te-marketing__grid__descr">Что такое социальные сети и зачем они вам нужны; Как начать Лэндинг, Веб-аналитика; SEO-оптимизация; Социальные сети; Контент-маркетинг; Контекстная реклама; Рассылка; А/В тестирование; Сервисы чата, обратного звонка и CRM</div>
-							<div class="te-marketing__grid__buttons">
-								<div class="te-marketing__grid__btn">Начать читать</div>
-								<div class="te-marketing__grid__check">
-									<img class="te-marketing__grid__check__img" src="images/marketing/check.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_right">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/1.svg">
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="te-marketing__grid__item te-marketing__grid__item_gray">
-			<a class="te-marketing__grid__link" href="">
-				<div class="te-marketing__grid__content">
-					<div class="te-marketing__grid__col__mobile">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/2.svg">
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_left">
-						<div class="te-marketing__grid__textwrapper">
-							<div class="te-marketing__grid__title">Целевая аудитория и конкуренты</div>
-							<div class="te-marketing__grid__smalltitle">Анализ и привлечение целевой аудитории</div>
-							<div class="te-marketing__grid__descr">Cпособы привлечения целевиков на сайт; Изучение конкурентов и составления торгового предложения; Создание стратегии интернет-маркетинга и постановка цели</div>
-							<div class="te-marketing__grid__buttons">
-								<div class="te-marketing__grid__btn">Начать читать</div>
-								<div class="te-marketing__grid__check">
-									<img class="te-marketing__grid__check__img" src="images/marketing/check.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_right">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/2.svg">
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="te-marketing__grid__item">
-			<a class="te-marketing__grid__link" href="">
-				<div class="te-marketing__grid__content">
-					<div class="te-marketing__grid__col__mobile">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/3.svg">
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_left">
-						<div class="te-marketing__grid__textwrapper">
-							<div class="te-marketing__grid__title">Landing page</div>
-							<div class="te-marketing__grid__smalltitle">Этапы и особености создания посадочных страниц </div>
-							<div class="te-marketing__grid__descr">Как появился формат лэндинга; Из каких этапов состоит создание посадочной страницы; Функциональные элементы лэндинга; Формула идеального лэндинга; От чего зависит конверсия; Сервисы, которые помогут в оформлении посадочных страниц</div>
-							<div class="te-marketing__grid__buttons">
-								<div class="te-marketing__grid__btn">Начать читать</div>
-								<div class="te-marketing__grid__check">
-									<img class="te-marketing__grid__check__img" src="images/marketing/check.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_right">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/3.svg">
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-		<div class="te-marketing__grid__item te-marketing__grid__item_gray">
-			<a class="te-marketing__grid__link" href="">
-				<div class="te-marketing__grid__content">
-					<div class="te-marketing__grid__col__mobile">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/4.svg">
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_left">
-						<div class="te-marketing__grid__textwrapper">
-							<div class="te-marketing__grid__title">Веб-аналитика</div>
-							<div class="te-marketing__grid__smalltitle">Инструкции по настройке веб-аналитики</div>
-							<div class="te-marketing__grid__descr">Зачем нужна веб-аналитика; Основные понятия веб-аналитики; Что выбрать Яндекс Метрика или Google Analytics; Как подключить и настроить Яндекс.Метрику; Как подключить и настроить Google Analytics; Дашборды Google Analytics: упрощаем работу с аналитикой; Чек-лист. Проверяем настройки аналитики.</div>
-							<div class="te-marketing__grid__buttons">
-								<div class="te-marketing__grid__btn">Начать читать</div>
-								<div class="te-marketing__grid__check">
-									<img class="te-marketing__grid__check__img" src="images/marketing/check.svg">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="te-marketing__grid__col te-marketing__grid__col_right">
-						<div class="te-marketing__grid__imgwrapper">
-							<img class="te-marketing__grid__img" src="images/marketing/4.svg">
-						</div>
-					</div>
-				</div>
-			</a>
-		</div>
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div class="te-grid-charpter-container" style="background: #fff;">
-		<div class="te-grid__charpter">
-			<div class="te-grid__charpter__number">Глава 1</div>
-			<div class="te-grid__charpter__title">Введение</div>
-			<div class="te-grid__charpter__descr">Мы познакомимся с базовыми понятиями журналистики, разберем, из каких функциональных компонентов состоит статья. Руководство знакомит с основами дизайн-мышления — метода создания продуктов, ориентированных на человека.</div>
-		</div>
-		<div class="te-grid__posts__wrapper te-clearfix">
-			
-				<div class="te-grid__post te-grid__post__100" style="background-color: #46daca; background-image: url(images/char1.jpg)">
-					<a class="te-grid__post__link" href="">
-					<div class="te-grid__post__info">
-						<div class="te-grid__post__number" style="color: #46daca;">1</div>
-						<div class="te-grid__post__title">Дизайн-мышление.<br>Гайд по процессу</div>
-						<div class="te-grid__post__descr">Руководство знакомит с основами дизайн-мышления — метода создания продуктов,ориентированных на человека.</div>
-					</div>
-					<div class="te-grid__post__btn__wrapper">
-						<div class="te-grid__post__btn">Читать</div>
-					</div>
-				</a>
-				</div>
-			
-		</div>
-	</div>
-
-
-	<div class="te-grid-charpter-container">
-		<div class="te-grid__charpter">
-			<div class="te-grid__charpter__number">Глава 2</div>
-			<div class="te-grid__charpter__title">Задача и идея</div>
-			<div class="te-grid__charpter__descr">И современный веб-дизайнер, и онлайн-журналист должен владеть методиками дизайн-исследования, погружения в опыт пользователя, продвинутыми графическими навыками: типографикой, композицией и теорией цвета, а также постоянно развивать свои творческие способности и воспитывать ответственность.</div>
-		</div>
-
-
-		<div class="te-grid__posts__wrapper te-clearfix">
-
-			<div class="te-grid__post" style="background-color: #f46c76; background-image: url(images/bg-test.jpg)">
-				<a class="te-grid__post__link" href="">
-					<div class="te-grid__post__checkmark">
-				    <div class="te-grid__post__checkmark_stem" style="background-color: #fff;"></div>
-				    <div class="te-grid__post__checkmark_kick" style="background-color: #fff;"></div>
-					</div>
-					<div class="te-grid__post__info">
-						<div class="te-grid__post__number" style="color: #f46c76;">2</div>
-						<div class="te-grid__post__title">Дизайн-мышление.<br>Гайд по процессу</div>
-						<div class="te-grid__post__descr">Руководство знакомит с основами дизайн-мышления — метода создания продуктов,ориентированных на человека.</div>
-					</div>
-					<div class="te-grid__post__btn__wrapper">
-						<div class="te-grid__post__btn">Читать</div>
-					</div>
-				</a>
-			</div><div class="te-grid__post" style="background-color: #67a4fd; background-image: url(images/iii.svg)">
-				<a class="te-grid__post__link" href="">
-					<div class="te-grid__post__info">
-						<div class="te-grid__post__number" style="color: #67a4fd;">3</div>
-						<div class="te-grid__post__title">Дизайн-мышление.<br>Гайд по процессу</div>
-						<div class="te-grid__post__descr">Что такое эмпатия, почему она важна для дизайнера, как развивать эмпатию и проявлять ее в отношениях с заказчиком.</div>
-					</div>
-					<div class="te-grid__post__btn__wrapper">
-						<div class="te-grid__post__btn">Читать</div>
-					</div>
-				</a>
-			</div><div class="te-grid__post" style="background-color: #F8DE45; background-image: url(images/qqq.svg)">
-				<div class="te-grid__post__link">
-					<div class="te-grid__post__info">
-						<div class="te-grid__post__number" style="color: #F8DE45;">3</div>
-						<div class="te-grid__post__title" style="color: #222">Развитие визуального вкуса и получение нового опыта</div>
-						<div class="te-grid__post__descr" style="color: #222">Какие качества нужно развивать дизайнеру, чтобы добиться профессионального роста.</div>
-					</div>
-					<div class="te-grid__post__btn__wrapper">
-						<!-- <div class="te-grid__post__btn">Читать</div> -->
-						<div class="te-grid__post__empty">Выйдет 20 октября</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="te-subscribe__container" style="background-image: url(images/bg-footer.jpg);">
-	<div class="te-subscribe__wrapper">
-		<h1 class="te-subscribe__title">Купите курс сегодня</h1>
-		<div class="te-subscribe__info te-clearfix">
-			<div class="te-subscribe__col-left">
-				<img src="images/222.png">
-			</div><div class="te-subscribe__col-right">
-				<p class="te-subscribe__description">
-					<strong><span>Принципы дизайна в Digital</span> — это курс из 20 лекций, доступных на вебе в формате лонгридов.</strong><br>Курс поможет освоить базовую теорию дизайна, понять, из каких этапов состоит работа над дизайном в вебе, и развить визуальный вкус.
-				</p>
-				<div class="te-subscribe__buttons">
-					<a class="te-subscribe__btn" href="">Купить за 7 000 руб.</a>
-					<a class="te-subscribe__btn te-subscribe__btn_white" href="">Подробнее</a>
-				</div>
-				<div class="te-subscribe__hint">
-					Вы также можете <a href="">купить эту лекцию отдельно</a>, цена одной лекции — 550 руб.
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="te-footer__container">
-	<div class="te-footer__wrapper">
-		<img class="te-footer__logo" src="images/t-logo-90.svg">
-		<p class="te-footer__text">
-			©2015-2016 Все права защищены. Перепечатка и цитирование материалов — только с разрешения авторов.
-		</p>
-		<p class="te-footer__text">
-			По всем вопросам пишите на <a href="mailto:hello@tilda.cc">hello@tilda.cc</a></a>
-		</p>
-	</div>
-</div>
-
-</body>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">
+			@media only screen and (max-width: 460px) {
+				.mobile-button {
+					font-size: 16px !important;
+					padding: 15px 15px !important;
+					display: block !important;
+			    width: 200px !important;
+			    margin: 0 auto !important;
+				}
+			}
+		</style>
+	</head>
+	<body cellpadding="0" cellspacing="0" style="padding: 0;margin: 0;border: 0;background-color: #fff;">
+		<table  cellpadding="0" cellspacing="0" style="width: 100%;border-collapse: collapse;border-spacing: 0;padding: 0;margin: 0;border: 0;background-color: #F4F4F4;">
+			<tr>
+				<td>
+					<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#F4F4F4">
+	          <tr>
+	          	<td style="max-width: 600px; padding: 60px 15px 0 15px; text-align: center;">
+								<a href="http://theoryandpractice.ru/" style="text-align: left;" target="_blank"><img align="left" style="text-align: left;width: 260px;height: auto;" src="http://theoryandpractice.ru/images/about_exchanges_mail/logo.png"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table  cellpadding="0" cellspacing="0" style="width: 100%;border-collapse: collapse;border-spacing: 0;padding: 0;margin: 0;border: 0;background-color: #F4F4F4;">
+			<tr>
+				<td>
+					<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#F4F4F4">
+	          <tr>
+	          	<td bgcolor="#F4F4F4" style="max-width: 600px; padding: 27px 15px 10px 15px; text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 16px;color: #222;line-height: 23px;">
+								Привет, 1 апреля сайту &laquo;Теории и&nbsp;практики&raquo; исполнилось 7 лет. Tысячи организаторов ежедневно добавляют информацию о&nbsp;своих лекциях, <nobr>мастер-классах</nobr>, курсах и&nbsp;конференциях во&nbsp;всех областях знаний&nbsp;&mdash; и&nbsp;в&nbsp;этой рассылке мы&nbsp;хотим рассказать об&nbsp;изменениях, которые сделали наш сервис еще удобнее.
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table  cellpadding="0" cellspacing="0" style="width: 100%;border-collapse: collapse;border-spacing: 0;padding: 0;margin: 0;border: 0;background-color: #F4F4F4;">
+			<tr>
+				<td>
+					<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#F4F4F4">
+	          <tr>
+	          	<td bgcolor="#F4F4F4" style="max-width: 600px; padding: 24px 15px 0; text-align: left;">
+								<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#fff">
+									<tr>
+				          	<td bgcolor="#fff" style="max-width: 600px;">
+											<img align="left" style="text-align: left;width: 100%;height: auto;" src="https://tnp-production.s3.amazonaws.com/uploads/image_block/000/035/836/image/x1400_e96ef51269.jpg">
+										</td>
+									</tr>
+				          <tr>
+				          	<td bgcolor="#fff" style="padding: 29px 27px 0;max-width: 600px;text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 16px;color: #222;line-height: 23px;">
+											Теперь лекции можно добавлять прямо на&nbsp;T&P, не&nbsp;дожидаясь экспорта с&nbsp;Exchang.es. Ваши анонсы появятся в&nbsp;потоке событий сразу после того, как вы&nbsp;их&nbsp;создали.
+										</td>
+									</tr>
+									<tr>
+				          	<td bgcolor="#fff" style="padding: 16px 27px 30px;max-width: 600px;">
+											<a style="text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color: #222;line-height: 23px;text-decoration: none; border: 1px solid #222;display: table; padding: 10px 22px 10px; letter-spacing: .2px;" href="http://theoryandpractice.ru/seminars/new">
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td>Добавить лекцию</td>
+													</tr>
+												</table>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table  cellpadding="0" cellspacing="0" style="width: 100%;border-collapse: collapse;border-spacing: 0;padding: 0;margin: 0;border: 0;background-color: #F4F4F4;">
+			<tr>
+				<td>
+					<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#F4F4F4">
+	          <tr>
+	          	<td bgcolor="#F4F4F4" style="max-width: 600px; padding: 44px 15px 0; text-align: left;">
+								<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#fff">
+									<tr>
+				          	<td bgcolor="#fff" style="max-width: 600px;">
+											<img align="left" style="text-align: left;width: 100%;height: auto;" src="https://tnp-production.s3.amazonaws.com/uploads/image_block/000/035/837/image/x1400_752d505b73.jpg">
+										</td>
+									</tr>
+				          <tr>
+				          	<td bgcolor="#fff" style="padding: 29px 27px 0;max-width: 600px;text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 16px;color: #222;line-height: 23px;">
+											Больше не&nbsp;нужно писать в&nbsp;редакцию для того, чтобы изменить время, дату или текст анонса&nbsp;&mdash; редактируйте лекцию, курс или грант в&nbsp;любой момент после его создания.
+										</td>
+									</tr>
+									<tr>
+				          	<td bgcolor="#fff" style="padding: 16px 27px 30px;max-width: 600px;">
+											<a style="text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color: #222;line-height: 23px;text-decoration: none; border: 1px solid #222;display: table; padding: 10px 22px 10px; letter-spacing: .2px;" href="http://theoryandpractice.ru/courses/new">
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td>Добавить курс</td>
+													</tr>
+												</table>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table  cellpadding="0" cellspacing="0" style="width: 100%;border-collapse: collapse;border-spacing: 0;padding: 0;margin: 0;border: 0;background-color: #F4F4F4;">
+			<tr>
+				<td>
+					<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#F4F4F4">
+	          <tr>
+	          	<td bgcolor="#F4F4F4" style="max-width: 600px; padding: 44px 15px 0; text-align: left;">
+								<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#fff">
+									<tr>
+				          	<td bgcolor="#fff" style="max-width: 600px;">
+											<img align="left" style="text-align: left;width: 100%;height: auto;" src="https://tnp-production.s3.amazonaws.com/uploads/image_block/000/035/840/image/x1400_cfb12ea149.jpg">
+										</td>
+									</tr>
+				          <tr>
+				          	<td bgcolor="#fff" style="padding: 29px 27px 0;max-width: 600px;text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 16px;color: #222;line-height: 23px;">
+											Мы&nbsp;хорошо знаем специфику работы тех, кто создает образовательный контент, поэтому придумали способы привлечения внимания аудитории к&nbsp;вашему анонсу. Пользуйтесь возможностью поставить ваш курс, грант или лекцию в&nbsp;социальные сети или рассылку T&P, выделяйте анонсы в&nbsp;общем фиде или добавляйте картинку, оплачивая только то, что вам действительно необходимо.
+										</td>
+									</tr>
+									<tr>
+				          	<td bgcolor="#fff" style="padding: 16px 27px 30px;max-width: 600px;">
+											<a style="text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color: #222;line-height: 23px;text-decoration: none; border: 1px solid #222;display: table; padding: 10px 22px 10px; letter-spacing: .2px;" href="mailto:kate.ivnv@gmail.com">
+												<table border="0" cellpadding="0" cellspacing="0">
+													<tr>
+														<td>Получить прайс-лист</td>
+													</tr>
+												</table>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table  cellpadding="0" cellspacing="0" style="width: 100%;border-collapse: collapse;border-spacing: 0;padding: 0;margin: 0;border: 0;background-color: #F4F4F4;">
+			<tr>
+				<td>
+					<table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" width="100%;" style="max-width: 600px;" bgcolor="#F4F4F4">
+	          <tr>
+	          	<td bgcolor="#F4F4F4" style="max-width: 600px; padding: 40px 15px 40px 15px; text-align: left; font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color: #222;line-height: 21px;">
+								Мы&nbsp;стремимся рекламировать на&nbsp;T&P&nbsp;только хорошие проекты и&nbsp;продукты. Именно поэтому вы&nbsp;попали в&nbsp;рассылку, предназначенную для организаторов образовательных событий. Если вы&nbsp;больше никогда не&nbsp;хотите получать эту информацию, нажмите на&nbsp;«<a align="center" href="mailto:kate.ivnv@gmail.com" style="text-decoration: none;color: #FF3333;" target="_blank">Отписаться</a>». Спасибо. Команда T&P.
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
 </html>
