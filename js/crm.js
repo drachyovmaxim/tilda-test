@@ -13,6 +13,12 @@ $(document).ready(function(){
     $(".tcrm-table-header-dropdown-content").toggleClass("tcrm-table-header-dropdown-content-show");
   });
 
+  var searchWrapper = $(".tcrm-filter");
+  $(".tcrm-search-icon-body").click(function() {
+    searchWrapper.toggleClass("tcrm-filter-hidden");
+    $(this).toggleClass("tcrm-search-icon-body-flipped");
+  });
+
   // var mainCheckbox = $(".tcrm-checkbox-main");
 
   $('.tcrm-input-date').pickmeup({
