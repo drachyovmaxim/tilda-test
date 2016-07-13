@@ -314,13 +314,13 @@ font-style: bold;
 
 .tcrm-table-col {
 	float: left;
-	min-width: 170px;
+	width: 150px;
+  min-width: 75px;
 	box-sizing: border-box;
 }
 
 .tcrm-table-col-0 {
-	width: 74px !important;
-	min-width: 74px;
+	width: 75px !important;
 }
 
 .tcrm-table-col-name {
