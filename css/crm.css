@@ -306,7 +306,8 @@ font-style: bold;
 .tcrm-table-container {
 	margin: 0 30px;
 	box-sizing: border-box;
-	overflow-y: scroll;
+	overflow-y: hidden;
+  overflow-x: scroll; 
 	padding-bottom: 30px;
 }
 
@@ -504,7 +505,7 @@ font-style: bold;
 }
 
 .tcrm-filter-dates-wrapper {
-  width: 350px;
+  width: 360px;
   float: left;
 }
 
