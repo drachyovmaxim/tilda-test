@@ -453,7 +453,8 @@ font-style: bold;
 }
 
 .tcrm-filter-date-icon {
-	width: 20px;
+	width: 19px;
+  height: 20px;
 	top: 1px;
 	right: 0;
 	pointer-events: none;
