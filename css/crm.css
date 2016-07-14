@@ -154,6 +154,7 @@ font-style: bold;
   position: relative;
   padding: 14px 0 16px;
   cursor: pointer;
+  height: 60px;
 }
 
 .tcrm-table-header .tcrm-table-col-0 {
@@ -387,7 +388,7 @@ font-style: bold;
 
 .tcrm-list .tcrm-table-col-name {
 	font-weight: 300;
-	color: #585858;
+	color: #222;
 }
 
 .tcrm-list-item {
@@ -461,6 +462,7 @@ font-style: bold;
 
 .pickmeup {
 	margin-top: 5px;
+  z-index: 999;
 }
 
 .tcrm-select {
@@ -500,9 +502,14 @@ font-style: bold;
 	padding-left: 27px;
 }
 
-.tcrm-filter-item {
-	width: 50%;
-	float: left;
+.tcrm-filter-dates-wrapper {
+  width: 340px;
+  float: left;
+}
+
+.tcrm-filter-fields {
+  // width: 440px;
+  padding-left: 400px;
 }
 
 .tcrm-filter-item:last-child {
@@ -515,8 +522,22 @@ font-style: bold;
 	display: inline-block;
 }
 
-.tcrm-filter-fields .tcrm-select {
-	margin-left: 6px;
+.tcrm-filter-fields .tcrm-input.tcrm-select {
+	margin-left: 10px;
+  padding-right: 18px;
+  position: relative;
+}
+
+.tcrm-filter-fields .tcrm-select:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #888888 transparent transparent transparent;
+  top: 11px;
+  right: -11px;
+  position: absolute;
 }
 
 .tcrm-filter-button {
@@ -548,7 +569,65 @@ font-style: bold;
   background: #cccccc;
 }
 
+@media screen and (max-width: 1100px) {
+  .tcrm-filter-fields {
+    padding-left: 370px;
+  }
 
+  .tcrm-filter-fields .tcrm-input, .tcrm-filter-fields .tcrm-select {
+    max-width: 148px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .tcrm-filter-fields {
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+  .tcrm-filter-fields .tcrm-input-first {
+    margin-right: 19px;
+  }
+
+  .tcrm-filter-button {
+    top: 33px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .tcrm-search-icon-wrapper {
+    display: none;
+  }
+
+  .tcrm-tabs-item {
+    padding: 10px 15px 10px;
+    font-size: 14px;
+  }
+
+  .tcrm-container {
+    padding: 0 20px;
+  }
+
+  .tcrm-table-container {
+    margin: 0 15px;
+  }
+
+  .tcrm-table-header .tcrm-table-col-name {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .tcrm-list .tcrm-table-col-name {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tcrm-tabs-item {
+    border-right: none;
+    padding-right: 0;
+  }
+}
 
 
 
