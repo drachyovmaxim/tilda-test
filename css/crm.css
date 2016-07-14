@@ -46,6 +46,7 @@ font-style: bold;
 .tcrm-wrapper {
 	background: #fff;
   height: 100vh;
+  overflow: hidden;
 }
 
 .tcrm-header {
@@ -90,13 +91,10 @@ font-style: bold;
 	height: 10px;
 	border-left: 1px solid #c1c1c1;
 	border-bottom: 1px solid #c1c1c1;
-  // display: inline-block;
-  // margin-right: 2px;
   -webkit-transition: all ease-in-out 0.2s;
   -moz-transition: all ease-in-out 0.2s;
   -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
-  // margin-bottom: 1px;
 }
 
 .tcrm-search-icon-container {
@@ -107,7 +105,6 @@ font-style: bold;
   transform: rotate(-45deg);
   display: inline-block;
   vertical-align: top;
-  // margin-bottom: 2px;
 }
 
 .tcrm-search-icon-body-flipped .tcrm-search-icon-container {
@@ -173,7 +170,7 @@ font-style: bold;
   -moz-transition: opacity ease-in-out 0.2s;
   -o-transition: opacity ease-in-out 0.2s;
   transition: opacity ease-in-out 0.2s;
-  cursor: move;
+  cursor: col-resize;
 }
 
 .tcrm-table-header .tcrm-table-col:hover .ui-resizable-e {
@@ -308,7 +305,7 @@ font-style: bold;
 	box-sizing: border-box;
 	overflow-y: hidden;
   overflow-x: scroll; 
-	padding-bottom: 30px;
+	// padding-bottom: 30px;
 }
 
 .tcrm-table-wrapper {
@@ -391,6 +388,7 @@ font-style: bold;
 .tcrm-list .tcrm-table-col-name {
 	font-weight: 300;
 	color: #222;
+  margin-top: 1px;
 }
 
 .tcrm-list-item {
@@ -399,7 +397,7 @@ font-style: bold;
   -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
   cursor: pointer;
-  padding: 13px 0 9px;
+  padding: 13px 0 8px;
 }
 
 .tcrm-list-item:nth-child(2n) {

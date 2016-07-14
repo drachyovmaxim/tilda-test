@@ -120,7 +120,7 @@ function resizeCrmCol(){
     stop: function(event, ui) {
       var text = $(this).attr("data-crm-col-index");
       var textwidth = $(this).width();
-      localStorage.setItem(text, textwidth); 
+      localStorage.setItem(text, textwidth);
     }
   });
 
