@@ -143,6 +143,8 @@ font-style: bold;
 
 .tcrm-table-header {
 	border-bottom: 1px solid #dcdcdc;
+  height: 60px;
+  overflow-y: hidden;
 }
 
 .tcrm-table-header .tcrm-table-col-name {
