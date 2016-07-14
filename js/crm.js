@@ -132,6 +132,7 @@ function resizeCrmCol(){
 }
 
 $(document).ready(function(){
+  resizeCrmCol();
   $('.tcrm-checkbox').styler();
   changeListHeight(); 
   showCrmSearch(); 
@@ -143,17 +144,7 @@ $(document).ready(function(){
   showMoreCrm('tcrm-list-tab-third');
   setCrmItemWidth();
   checkCrmCheckboxes();
-  resizeCrmCol();
-  $(".tcrm-table-header").css("overflow-y", "hidden");
 });
-
-
-$(window).load(function() {
-  changeListHeight();
-  setCrmItemWidth();
-  $(".tcrm-table-header").css("overflow-y", "");
-});
-
 
 $(window).resize(function() {
   changeListHeight();
