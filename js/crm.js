@@ -144,12 +144,14 @@ $(document).ready(function(){
   setCrmItemWidth();
   checkCrmCheckboxes();
   resizeCrmCol();
+  $(".tcrm-table-header").css("overflow-y", "hidden");
 });
 
 
 $(window).load(function() {
   changeListHeight();
   setCrmItemWidth();
+  $(".tcrm-table-header").css("overflow-y", "");
 });
 
 

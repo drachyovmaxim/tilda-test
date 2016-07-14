@@ -144,7 +144,6 @@ font-style: bold;
 .tcrm-table-header {
 	border-bottom: 1px solid #dcdcdc;
   height: 60px;
-  overflow-y: hidden;
 }
 
 .tcrm-table-header .tcrm-table-col-name {
@@ -307,7 +306,7 @@ font-style: bold;
 .tcrm-table-container {
 	margin: 0 30px;
 	box-sizing: border-box;
-	overflow: scroll;
+	overflow-y: scroll;
 	padding-bottom: 30px;
 }
 
@@ -505,7 +504,7 @@ font-style: bold;
 }
 
 .tcrm-filter-dates-wrapper {
-  width: 340px;
+  width: 350px;
   float: left;
 }
 
