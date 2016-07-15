@@ -350,6 +350,7 @@ font-style: bold;
 	margin-top: 1px;
 	width: 14px;
 	height: 14px;
+  display: block !important;
 }
 
 .jq-checkbox.checkbox-btn.tcrm-checkbox.checked {
