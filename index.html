@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/crm.css">
 	<link rel="stylesheet" type="text/css" href="css/pickmeup.css">
+	<link rel="stylesheet" type="text/css" href="css/t-popups.css">
+	<link rel="stylesheet" type="text/css" href="css/tcrm-popups.css">
 
 	<script src="js/jquery-1.11.3.js"></script>
 	<script src="js/jquery.formstyler.min.js"></script>
@@ -21,6 +23,7 @@
 	<script src="js/jquery.validate.js"></script>
 	<script src="js/jscolor.js"></script>
 	<script src="js/pickmeup.js"></script>
+	<script src="js/t-popups.js"></script>
 	<!--[if lt IE 9]>
 	<script src="js/html5.js"></script>
 	<![endif]-->
@@ -28,6 +31,9 @@
 
 </head>
 <body>
+
+
+
 <div style="height: 100px;"></div>
 <div class="tcrm-container">
 	<div class="tcrm-wrapper">
@@ -110,6 +116,7 @@
 		</div>
 
 		<div class="tcrm-table-container">
+		<div class="tcrm-table-container-scrollable">
 		<div class="tcrm-table-wrapper">
 			<div class="tcrm-table-header tcrm-clear">
 				<div class="tcrm-table-col">
@@ -251,7 +258,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="tcrm-list-item tcrm-clear">
+					<div class="tcrm-list-item">
+						<a class="tcrm-clear" href="javascript:showpopup('popup_show_cards');">
 						<div class="tcrm-table-col">
 							<div class="tcrm-table-header-checkbox">
 								<label>
@@ -284,6 +292,7 @@
 								-
 							</div>
 						</div>
+						</a>
 					</div>
 					<div class="tcrm-list-item tcrm-clear">
 						<div class="tcrm-table-col">
@@ -1560,6 +1569,7 @@
 				</div>
 			</div>
 
+		</div>
 		</div>
 		</div>
 
