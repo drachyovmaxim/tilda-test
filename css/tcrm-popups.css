@@ -2,6 +2,37 @@
   margin-bottom: 35px;
 }
 
-.tcrm-popup-select .td-item-group-two__title {
-  margin-top: 9px;
+.tcrm-card-popup-buttons {
+  margin-top: 40px;
 }
+
+.tcrm-card-popup-select {
+  position: relative;
+}
+
+.tcrm-card-popup-select .td-input {
+  border-radius: 0;
+  cursor: pointer;
+  font-family: "tfutura",arial;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.tcrm-card-popup-select:after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #9a9a9a transparent transparent transparent;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  -webkit-transition: all ease-in-out 0.1s;
+  -moz-transition: all ease-in-out 0.1s;
+  -o-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+}
+
+
+

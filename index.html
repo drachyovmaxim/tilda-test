@@ -32,9 +32,120 @@
 </head>
 <body>
 
+<div class="td-popup tcrm-card-popup" id="popup_show_cards" style="display: none;">
+	<div class="td-popup__wrap">
+		<div class="td-popup-window">
+			<form>
+				
+				<div class="td-popup-window__head">
+					<div class="td-popup-window__close" onclick="closepopup();"></div>
+					<div class="td-popup-window__title">Карточка контакта</div>
+				</div>
+				
+				<div class="td-popup-window__middle">
+					<div class="td-popup-window__middle-wrapper">
+						<div class="tcrm-card-popup-top">
+							<div class="td-item-group tcrm-clear">
+								<div class="td-item-group-two__title">Имя</div>
+								<div class="td-item-group-two__right">
+									<input type="text" name="sort" class="td-input" value="Пантимильон Рождественский">
+								</div>
+							</div>
+							<div class="td-item-group tcrm-clear">
+								<div class="td-item-group-two__title">E-mail</div>
+								<div class="td-item-group-two__right">
+									<input type="text" name="sort" class="td-input" value="pant@gmail.com">
+								</div>
+							</div>
+							<div class="td-item-group tcrm-clear">
+								<div class="td-item-group-two__title">Телефон и длинное название</div>
+								<div class="td-item-group-two__right">
+									<input type="text" name="sort" class="td-input" value="8 (903) 555-23-12">
+								</div>
+							</div>
+							<div class="td-item-group tcrm-clear">
+								<div class="td-item-group-two__title">Дата добавления</div>
+								<div class="td-item-group-two__right">
+									<input type="text" name="sort" class="td-input" value="20.06.2016">
+								</div>
+							</div>
+							<div class="td-item-group tcrm-clear">
+								<div class="td-item-group-two__title">Комментарий</div>
+								<div class="td-item-group-two__right">
+									<input type="text" name="sort" class="td-input" value="Необходимо поменять e-mail на новый">
+								</div>
+							</div>
+							<div class="td-item-group tcrm-clear">
+								<div class="td-item-group-two__title">Статус контакта</div>
+								<div class="td-item-group-two__right">
+									<div class="tcrm-card-popup-select">
+									<select class="td-input" name="textfontweight">
+									  <option value="" selected="selected">Активный</option>			
+									  <option value="400">Отложенный</option>		
+									  <option value="400">Закрытый</option>										  
+									</select>			
+									</div>	    				    						
+								</div>
+							</div>
+							<div class="tcrm-card-popup-buttons">
+								<input type="submit" value="Сохранить изменения" class="td-popup-btn">	
+								<input type="button" onclick="closepopup();" value="Закрыть" class="td-popup-btn-white">
+							</div>
+						</div>
+					</div>
 
+					<div class="tcrm-card-popup-add-comments">
+						<div class="td-item-group">
+							<div class="td-item-group__title">Добавление комментария</div>
+							<textarea></textarea>
+						</div>
+						<div class="tcrm-card-popup-comment-files">
+							<div class="tcrm-card-popup-comment-files-item">
+								<span>somefile.png</span>
+							</div>
+							<div class="tcrm-card-popup-comment-files-item">
+								<span>verybigsomefileuploadedtitle.jpg</span>
+							</div>
+						</div>
+						<input type="button" onclick="closepopup();" value="Добавить комментарий" class="td-popup-btn">
+					</div>
+
+					<div class="tcrm-card-popup-comments">
+						<div class="tcrm-card-popup-comments-title">Комментарии (<span>14</span>)</div>
+						<div class="tcrm-card-popup-comments-wrapper">
+							<div class="tcrm-card-popup-comments-item">
+								<div class="tcrm-card-popup-comments-item-name">
+									Мария
+									<span>(maria@gmail.com)</span>
+								</div>
+								<div class="tcrm-card-popup-comments-item-text">
+									Рост пожилого населения планеты заставляет экономистов, социологов, врачей, философов, архитекторов переосмысливать феномен старения: в современном мире высоких технологий медицина позволяет дольше сохранять физическое и ментальное здоровье
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
 
 <div style="height: 100px;"></div>
+<div class="tcrm-project-midpanel">
+	<div class="tcrm-project-midpanel__wrapper">
+		<div class="tcrm-project-midpanel__site-title ">Мастер-класс</div>
+		<div class="tcrm-project-midpanel__buttons">				
+			<div class="tcrm-project-midpanel__button">
+				<table class="tcrm-button-ico tcrm-button-ico_white" onclick="showformEditProjectSettings_new('19350');"><tbody><tr><td class="tcrm-button-ico__ico"><img src="https://tilda.cc/tpl/img/td-site__settings.png" width="14px" height="14px"></td><td class="tcrm-button-ico__title">Настройки списка</td></tr></tbody></table>	
+			</div>						
+			<div class="tcrm-project-midpanel__button">
+				<table class="tcrm-button-ico" onclick="showformAddPage('19350');"><tbody><tr><td class="tcrm-button-ico__ico"><img src="https://tilda.cc/tpl/img/td-icon-plus.png" width="14px" height="14px"></td><td class="tcrm-button-ico__title">Добавить новый контакт</td></tr></tbody></table>	
+			</div>
+		</div>
+	</div>
+</div>
 <div class="tcrm-container">
 	<div class="tcrm-wrapper">
 
@@ -224,7 +335,8 @@
 
 			<div class="tcrm-list">
 				<div class="tcrm-list-tab tcrm-list-tab-active"  id="tcrm-list-tab-first">
-					<div class="tcrm-list-item tcrm-clear">
+					<div class="tcrm-list-item">
+						<a class="tcrm-clear" href="javascript:showpopup('#popup_show_cards');">
 						<div class="tcrm-table-col">
 							<div class="tcrm-table-header-checkbox">
 								<label>
@@ -257,9 +369,10 @@
 								Изменено поле телефона на 10128471082798
 							</div>
 						</div>
+						</a>
 					</div>
 					<div class="tcrm-list-item">
-						<a class="tcrm-clear" href="javascript:showpopup('popup_show_cards');">
+						<a class="tcrm-clear" href="javascript:showpopup('#popup_show_cards');">
 						<div class="tcrm-table-col">
 							<div class="tcrm-table-header-checkbox">
 								<label>

@@ -22,6 +22,7 @@ function showCrmSearch() {
 function initCrmDatePicker() {
   $('.tcrm-input-date').pickmeup({
     hide_on_select: true,
+    date: true,
     locale      : {
       days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
       daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
@@ -33,15 +34,20 @@ function initCrmDatePicker() {
 }
 
 function initCrmTabs() {
-  $('.tcrm-tabs-item').click(function() {
-    removeActiveCheckboxes();
-    $('.tcrm-tabs-item').removeClass('tcrm-active');
-    $(this).addClass('tcrm-active');
-    $(".tcrm-list-tab").removeClass('tcrm-list-tab-active');
-    var activeContent = $(this).attr("data-crm-tab");
-    $("#" + activeContent + "").addClass('tcrm-list-tab-active');
-    
-  });
+  var tabsWrapper = $(".tcrm-tabs");
+  if (tabsWrapper.length ) {
+    $('.tcrm-tabs-item').click(function() {
+      removeActiveCheckboxes();
+      $('.tcrm-tabs-item').removeClass('tcrm-active');
+      $(this).addClass('tcrm-active');
+      $(".tcrm-list-tab").removeClass('tcrm-list-tab-active');
+      var activeContent = $(this).attr("data-crm-tab");
+      $("#" + activeContent + "").addClass('tcrm-list-tab-active');
+    });
+    $(".tcrm-header").removeClass("tcrm-header-no-tabs");
+  } else {
+    $(".tcrm-header").addClass("tcrm-header-no-tabs");
+  }
 }
 
 function removeActiveCheckboxes() {

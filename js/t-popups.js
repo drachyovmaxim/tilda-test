@@ -5,8 +5,7 @@ function showbyid_and_hidebutton(block,butt){
 
 function showpopup(popup_div_id,data){
   $('body').addClass('td-body_popup-opened');
-  $('#'+ popup_div_id + '').addClass('td-popup_opened');
-  $('#'+ popup_div_id + '').fadeIn(300);
+  $(popup_div_id).addClass('td-popup_opened');
   // $(popup_div_id).find('.td-popup-window').html(data);
   $(popup_div_id).fadeIn('fast');
   $(document).keyup(keyUpFunc);   
@@ -21,7 +20,7 @@ function keyUpFunc(e) {
 function closepopup(){
   $('body').removeClass('td-body_popup-opened');
   var popup=$(".td-popup_opened");    
-  popup.find('.td-popup-window').html('');
+  // popup.find('.td-popup-window').html('');
   popup.fadeOut();
   $(document).unbind("keyup", keyUpFunc);
 }
