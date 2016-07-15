@@ -1,3 +1,7 @@
 .tcrm-card-popup .td-popup-window__title {
   margin-bottom: 35px;
 }
+
+.tcrm-popup-select .td-item-group-two__title {
+  margin-top: 9px;
+}

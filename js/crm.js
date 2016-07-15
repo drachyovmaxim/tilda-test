@@ -91,7 +91,7 @@ function showMoreCrm(id){
 function setCrmContainerWidth(){
   var totalWidth=0;
   $('.tcrm-table-header .tcrm-table-col').each(function() {
-    totalWidth += $(this).width();
+    totalWidth += $(this).width() + 30;
     var tableContainer = $(".tcrm-table-container").innerWidth();
     var tableWrapper = $(".tcrm-table-wrapper").innerWidth();
     if (tableContainer < totalWidth) {

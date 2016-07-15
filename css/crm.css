@@ -389,7 +389,7 @@ font-style: bold;
 }
 
 .tcrm-list {
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 .tcrm-list .tcrm-table-col-name {
