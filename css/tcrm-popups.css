@@ -62,7 +62,7 @@
 .tcrm-card-popup-add-comments-field-addicon {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  right: 15px;
 }
 
 .tcrm-card-popup-add-comments-field {
@@ -70,8 +70,10 @@
   border-radius: 3px;
   -webkit-appearance: none;
   width: 100%;
-  min-height: 80px;
-  padding: 15px 40px 15px 20px;
+  min-height: 105px;
+  padding: 18px 40px 18px 20px;
+  resize: none;
+  line-height: 1.15;
 }
 
 .tcrm-card-popup-add-comments-field:focus, .tcrm-card-popup-add-comments-field:hover {
@@ -115,32 +117,26 @@
 .tcrm-card-popup-comments-title {
   font-size: 18px;
   color: #222;
-  margin-bottom: 16px;
-}
-
-.tcrm-card-popup-comments-item {
-  background: #f4f4f4;
-  padding: 22px 20px;
-  border-radius: 3px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid #d5d5d5;
+  padding-bottom: 17px;
 }
 
 .tcrm-card-popup-comments-item-name {
-  font-weight: 300;
-  font-size: 17px;
-  color: #777;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 
 .tcrm-card-popup-comments-item-text {
   font-weight: 300;
-  font-size: 17px;
-  line-height: 1.25;
-  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 12px;
   color: #222;
 }
 
 .tcrm-card-popup-comments-item-files {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .tcrm-card-popup-comments-item-files-item {
@@ -169,19 +165,282 @@
 }
 
 .tcrm-card-popup-comments-item {
-  margin-top: 26px;
+  margin-top: 44px;
+  position: relative;
 }
 
 .tcrm-card-popup-comments-item:first-child {
   margin-top: 0;
 }
 
+.tcrm-new-card-popup-buttons {
+  text-align: center;
+  margin-top: 60px;
+}
 
+.tcrm-settings-popup .td-popup-menu__item {
+  margin-left: 42px;
+}
 
+.tcrm-settings-popup .td-popup-menu__item:nth-last-child(2) {
+  margin-right: 33px;
+}
 
+.tcrm-settings-tab-actions .td-ps-list-link {
+  margin-top: 49px;
+  margin-bottom: 67px;
+  border-right: 0;
+  max-width: 300px;
+  margin: 49px auto 67px;
+}
 
+.tcrm-settings-tab-actions .td-ps-list-link li {
+  width: 100%;
+  border-right: 1px solid #d5d5d5;
+}
 
+.tcrm-settings-tab-columns-wrapper .td-item-group__title {
+  color: #000;
+  margin-bottom: 5px;
+}
 
+.tcrm-settings-tab-columns-wrapper .td-input {
+  font-size: 18px;
+  height: 47px;
+}
+
+.tcrm-settings-tab-columns-item-input {
+  display: none;
+  position: relative;
+}
+
+.tcrm-settings-tab-columns-item-input-btn {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  font-size: 16px;
+  font-weight: 300;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  padding: 7px 12px;
+  display: block;
+}
+
+.tcrm-settings-tab-columns-item-info {
+  overflow: hidden;
+  height: 46px;
+  border-bottom: 1px solid #b5b5b5;
+  position: relative;
+  padding-left: 24px;
+}
+
+.tcrm-settings-tab-columns-name-edit {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  -moz-transition: opacity ease-in-out 0.2s;
+  -o-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.tcrm-settings-tab-columns-item-info:hover .tcrm-settings-tab-columns-name-edit {
+  opacity: 1;
+}
+
+.tcrm-settings-tab-columns-checkbox {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.tcrm-settings-tab-columns-checkbox .jq-checkbox.checkbox-btn.tcrm-checkbox {
+  width: 13px;
+  height: 13px;
+}
+
+.tcrm-settings-tab-columns-checkbox .jq-checkbox.checkbox-btn.tcrm-checkbox.checked .jq-checkbox__div {
+  width: 29px;
+  height: 7px;
+}
+
+.tcrm-settings-tab-columns-name {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 14px;
+  color: #aaa;
+}
+
+.tcrm-settings-tab-columns-item-active .tcrm-settings-tab-columns-name {
+  color: #000;
+}
+
+.tcrm-settings-tab-columns-name-type {
+  color: #aaa;
+}
+
+.tcrm-settings-tab-columns-add-item {
+  color: #fa876c;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 18px;
+  display: block;
+}
+
+.tcrm-users-tab-wrapper {
+  margin-top: 16px;
+}
+
+.tcrm-users-tab-item {
+  border-bottom: 1px solid #d5d5d5;
+  width: 100%;
+  padding: 28px 0;
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+}
+
+.tcrm-users-tab-item-name, .tcrm-users-tab-item-type, .tcrm-users-tab-item-activity {
+  float: left;
+}
+
+.tcrm-users-tab-item-name {
+  width: 28%;
+  white-space: nowrap;
+  overflow:hidden !important;
+  text-overflow: ellipsis;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.tcrm-users-tab-item-type {
+  width: 17%;
+}
+
+.tcrm-users-tab-item-activity {
+  width: 55%;
+  color: #919191;
+}
+
+.tcrm-users-tab-item-activity-repeat a {
+  color: #fa876c;
+}
+
+.tcrm-users-tab-item-icon {
+  position: absolute;
+  top: 29px;
+  right: 0;
+  -webkit-transition: opacity ease-in-out 0.2s;
+  -moz-transition: opacity ease-in-out 0.2s;
+  -o-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+  opacity: 0;
+}
+
+.tcrm-users-tab-item:hover .tcrm-users-tab-item-icon {
+  opacity: 1;
+}
+
+.tcrm-users-tab-add {
+  color: #fa876c;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 18px;
+  display: block;
+  cursor: pointer;
+}
+
+.tcrm-export-tab-title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.tcrm-export-tab-csv-link {
+  border: 1px solid #d5d5d5;
+  padding: 36px 15px 33px;
+  display: block;
+  text-align: center;
+}
+
+.tcrm-export-tab-csv-icon, .tcrm-export-tab-csv-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tcrm-export-tab-csv-icon {
+  margin-right: 8px;
+}
+
+.tcrm-export-tab-csv-title {
+  color: #8c8c8c;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 2px;
+}
+
+.tcrm-export-tab-csv-link:hover .tcrm-export-tab-csv-title {
+  color: #fa876c;
+}
+
+.tcrm-export-tab-csv {
+  padding-bottom: 55px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.tcrm-export-tab-text {
+  font-weight: 300;
+  font-size: 18px;
+  color: #616161;
+  line-height: 1.25;
+}
+
+.tcrm-export-tab-text a {
+  color: #fa876c;
+}
+
+.tcrm-export-tab-title-second {
+  margin-bottom: 18px;
+  margin-top: 60px;
+}
+
+.tcrm-export-tab-select {
+  margin-top: 10px;
+}
+
+.tcrm-export-tab-btn-wrapper {
+  text-align: center;
+  margin: 50px auto 58px;
+}
+
+.tcrm-export-popup-text {
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tcrm-export-popup-img {
+  max-width: 120px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 980px) {
+  .tcrm-users-tab-item-name, .tcrm-users-tab-item-type, .tcrm-users-tab-item-activity {
+    width: 100%;
+    float: none;
+    margin-bottom: 8px;
+  }
+}
 
 
 
