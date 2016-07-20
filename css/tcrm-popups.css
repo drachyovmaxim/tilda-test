@@ -73,7 +73,8 @@
   min-height: 105px;
   padding: 18px 40px 18px 20px;
   resize: none;
-  line-height: 1.15;
+  line-height: 1.2;
+  font-size: 16px;
 }
 
 .tcrm-card-popup-add-comments-field:focus, .tcrm-card-popup-add-comments-field:hover {
@@ -287,6 +288,7 @@
   font-size: 18px;
   margin-top: 18px;
   display: block;
+  cursor: pointer;
 }
 
 .tcrm-users-tab-wrapper {
@@ -322,6 +324,10 @@
 .tcrm-users-tab-item-activity {
   width: 55%;
   color: #919191;
+}
+
+.tcrm-users-tab-item-activity-repeat {
+  margin-left: 2px;
 }
 
 .tcrm-users-tab-item-activity-repeat a {
@@ -427,11 +433,11 @@
   margin-bottom: 20px;
 }
 
-.tcrm-export-popup-img {
-  max-width: 120px;
+.tcrm-export-popup-icon {
+  max-width: 127px;
   width: 100%;
   display: block;
-  margin: 0 auto;
+  margin: 5px auto 0;
 }
 
 @media screen and (max-width: 980px) {

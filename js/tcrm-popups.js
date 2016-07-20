@@ -57,10 +57,23 @@ function startSrmExport(){
   });
 }
 
+function newSrmColumn(){
+  $(".tcrm-settings-tab-columns-add-item").click(function() {
+    closepopup();
+    showpopup('#tcrm-popup-new-column');
+  });
+
+  $(".tcrm-new-column-popup .td-popup-window__close, .tcrm-new-columns-popup-btn").click(function() {
+    closepopup();
+    showpopup('#tcrm_popup_settings');
+  });
+}
+
 $(document).ready(function(){
   init_popup();
   editSrmPopupColumns();
   setSrmPopupColumnsColor();
   addSrmNewUser();
   startSrmExport();
+  newSrmColumn();
 });
