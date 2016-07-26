@@ -33,6 +33,18 @@
 </head>
 <body>
 
+<div class="tcrm-notification-container">
+	<div class="tcrm-notification-wrapper">
+		<div class="tcrm-notification-text">
+			Добавлен новый контакт
+		</div>
+		<div class="tcrm-notification-icon">
+			<div class="tcrm-notification-icon-line tcrm-notification-icon-left"></div>
+			<div class="tcrm-notification-icon-line tcrm-notification-icon-right"></div>
+		</div>
+	</div>
+</div>
+
 <div class="td-popup tcrm-card-popup" id="tcrm_popup_show_cards">
 	<div class="td-popup__wrap">
 		<div class="td-popup-window">
@@ -294,7 +306,8 @@
 
 <div class="td-popup tcrm-card-popup" id="tcrm_popup_new_card">
 	<div class="td-popup__wrap">
-		<div class="td-popup-window">
+		<!-- для ошибки добавить класс  -->
+		<div class="td-popup-window td-popup-window-warning">
 			<form>
 				
 				<div class="td-popup-window__head">
@@ -305,13 +318,15 @@
 				<div class="td-popup-window__middle">
 					<div class="td-popup-window__middle-wrapper">
 						<div class="tcrm-card-popup-top">
+
 							<div class="td-item-group tcrm-clear">
 								<div class="td-item-group-two__title">Имя</div>
 								<div class="td-item-group-two__right">
 									<input type="text" name="sort" class="td-input" value="Пантимильон Рождественский">
 								</div>
 							</div>
-							<div class="td-item-group tcrm-clear">
+							<!-- для ошибки добавить класс td-input-required -->
+							<div class="td-item-group tcrm-clear td-input-required">
 								<div class="td-item-group-two__title">E-mail</div>
 								<div class="td-item-group-two__right">
 									<input type="text" name="sort" class="td-input" value="pant@gmail.com">
@@ -346,6 +361,9 @@
 									</select>			
 									</div>	    				    						
 								</div>
+							</div>
+							<div class="td-popup-window-warning-wrapper">
+								<div class="td-popup-window-warning-text">Некорректный e-mail</div>
 							</div>
 							<div class="tcrm-card-popup-buttons tcrm-new-card-popup-buttons">
 								<input type="submit" value="Добавить контакт" class="td-popup-btn">

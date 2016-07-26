@@ -69,6 +69,12 @@ function newSrmColumn(){
   });
 }
 
+function closeCrmNotification(){
+  $(".tcrm-notification-icon").click(function() {
+    $(".tcrm-notification-container").addClass("tcrm-notification-hidden");
+  });
+}
+
 $(document).ready(function(){
   init_popup();
   editSrmPopupColumns();
@@ -76,4 +82,5 @@ $(document).ready(function(){
   addSrmNewUser();
   startSrmExport();
   newSrmColumn();
+  closeCrmNotification();
 });
