@@ -129,6 +129,7 @@ function setCrmListItemWidth(){
 
 function resizeCrmCol(){
   $('.tcrm-table-header .tcrm-table-col').resizable({
+    minWidth: 100,
     resize: function(event, ui) {
       $(".tcrm-table-wrapper").css({
         'min-width' : '3000px'
@@ -163,4 +164,5 @@ $(document).ready(function(){
 $(window).resize(function() {
   changeListHeight();
   setCrmListItemWidth();
+  setCrmContainerWidth();
 });
