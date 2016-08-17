@@ -20,17 +20,16 @@ function showCrmSearch() {
 }
 
 function initCrmDatePicker() {
-  $('.tcrm-input-date').pickmeup({
-    hide_on_select: true,
-    date: true,
-    locale      : {
-      days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-      daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-      daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-      months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'December'],
-      monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
-    },  
+  $('.tcrm-input-date').datetimepicker({
+    format:'d.m.Y',
+    timepicker: false
   });
+  $('#datetimepicker').datetimepicker({
+    format:'d.m.Y H:i',
+    step: 5,
+    lazyInit: true
+  });
+  $.datetimepicker.setLocale('ru');
 }
 
 function initCrmTabs() {
