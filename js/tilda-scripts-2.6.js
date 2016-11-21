@@ -1707,7 +1707,7 @@ function t_showZoom(){
     $(window).scroll(function(event){
       var st = $(this).scrollTop();
       if (st > lastScrollTop){     
-        $('body').removeClass("t-zoomer__show");
+        $('body').not('.t-zoomer__show_fixed').removeClass("t-zoomer__show");
       }
       lastScrollTop = st;
     });
