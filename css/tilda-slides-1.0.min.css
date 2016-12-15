@@ -1,16 +1,17 @@
 .t-slides {
-    position: relative
+    position: relative;
 }
 
 .t-slides__container {
     overflow: hidden;
-    position: relative
+    position: relative;
 }
 
 .t-slides__items-wrapper {
     position: relative;
     overflow: hidden;
-    font-size: 0
+    font-size: 0;
+    -webkit-backface-visibility: hidden;
 }
 
 .t-slides_animated.t-slides_animated-none {
