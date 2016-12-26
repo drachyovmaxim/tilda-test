@@ -1293,7 +1293,6 @@
   bottom: 0;
   margin: 0 auto;
   pointer-events: none;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=',sizingMethod='scale');
   background: none !important;
 }
 .t-carousel__arrow_outsidesmall .t-carousel__arrow__wrapper_left {
