@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+Sitemap: http://project98423.tilda.ws/sitemap.xml
+Host: project98423.tilda.ws
