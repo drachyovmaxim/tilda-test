@@ -323,14 +323,14 @@
         right: 10px
     }
     .t-slds__arrow-withbg {
-        width: 26px!important;
-        height: 26px!important
+        width: 24px!important;
+        height: 24px!important
     }
     .t-slds__arrow_body {
-        width: 12px!important
+        width: 10px!important
     }
     .t-slds__arrow-withbg .t-slds__arrow_body {
-        width: 7px!important
+        width: 6px!important
     }
     .t-col .t-slds__witharrows .t-slds__wrapper {
         padding: 0 15px
