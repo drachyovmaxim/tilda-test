@@ -279,13 +279,13 @@
 }
 
 .t-slds__caption__container {
-    position: relative
+    position: relative;
+    margin-top: 16px;
 }
 
 .t-slds__caption_wrapper {
     border-top: 1px solid #eee;
     padding: 14px 0;
-    margin-top: 16px
 }
 
 .t-slds__caption {
