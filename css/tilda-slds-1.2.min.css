@@ -323,11 +323,11 @@
         right: 10px
     }
     .t-slds__arrow-withbg {
-        width: 30px!important;
-        height: 30px!important
+        width: 26px!important;
+        height: 26px!important
     }
     .t-slds__arrow_body {
-        width: 16px!important
+        width: 12px!important
     }
     .t-slds__arrow-withbg .t-slds__arrow_body {
         width: 7px!important
