@@ -1,16 +1,28 @@
 ErrorDocument 403 /404.html
 ErrorDocument 404 /404.html
 
-DirectoryIndex page344168.html
+DirectoryIndex page349400.html
 
 RewriteEngine On
 
-RewriteRule ^slider$ page475138.html [NC]
-RewriteRule ^slider/$ page475138.html [NC]
+RewriteRule ^la$ page166798.html [NC]
+RewriteRule ^la/$ page166798.html [NC]
 
-RewriteRule ^gawegaw$ page502997.html [NC]
-RewriteRule ^gawegaw/$ page502997.html [NC]
+RewriteRule ^i$ page308230.html [NC]
+RewriteRule ^i/$ page308230.html [NC]
 
-RewriteRule ^galle$ page729983.html [NC]
-RewriteRule ^galle/$ page729983.html [NC]
+RewriteRule ^om$ page308249.html [NC]
+RewriteRule ^om/$ page308249.html [NC]
+
+RewriteRule ^faef$ page344261.html [NC]
+RewriteRule ^faef/$ page344261.html [NC]
+
+RewriteRule ^popup$ page417219.html [NC]
+RewriteRule ^popup/$ page417219.html [NC]
+
+RewriteRule ^menu$ page503271.html [NC]
+RewriteRule ^menu/$ page503271.html [NC]
+
+RewriteRule ^gal$ page1125832.html [NC]
+RewriteRule ^gal/$ page1125832.html [NC]
 
