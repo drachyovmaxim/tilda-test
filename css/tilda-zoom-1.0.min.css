@@ -23,6 +23,9 @@
   transition: transform cubic-bezier(0.4, 0, 0.22, 1) .4s;
 }
 
+.zcontainer {
+  position: relative;
+}
 
 
 
@@ -30,7 +33,17 @@
 
 
 
+.t-slds, .t-slds__container, .t-slds__items-wrapper, .t-slds__item, .t-slds__wrapper {
+    height: 100%;
+}
 
+#reczoom .t-slds_animated-none .t-slds__item {
+    display: block;
+}
+
+.t-slds__arrow_wrapper {
+    width: 40px !important;
+}
 
 
 
@@ -50,10 +63,10 @@
     bottom: 0;
     z-index: -1;
     opacity: 0;
-    -webkit-transition: all ease-in-out .2s;
-    -moz-transition: all ease-in-out .2s;
-    -o-transition: all ease-in-out .2s;
-    transition: all ease-in-out .2s;
+    -webkit-transition: opacity ease-in-out .3s;
+    -moz-transition: opacity ease-in-out .3s;
+    -o-transition: opacity ease-in-out .3s;
+    transition: opacity ease-in-out .3s;
     background: #fff;
 }
 
@@ -65,10 +78,10 @@
 .t-zoomer__container {
     text-align: center;
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0
+    top: 40px;
+    right: 40px;
+    left: 40px;
+    bottom: 40px
 }
 
 .t-zoomer__comments {
@@ -154,15 +167,11 @@
     z-index: 999999999999
 }
 
-.t-zoomer__close:hover {
-    opacity: .7
-}
-
 .t-zoomer__close-line {
     position: absolute;
     left: 15px;
     height: 26px;
-    width: 2px;
+    width: 1px;
     background-color: #222
 }
 

@@ -24,7 +24,6 @@ $('.zcontainer').each(function(index) {
   var ratio = imageH/imageW;
   var containerRatio = maxH/maxW;
   var allowZoom = false;
-  var clicked = false;
   if (imageW > maxW || imageH > maxH) {
     var scale = Math.min(maxW / imageW, maxH / imageH);
     allowZoom = true;
@@ -47,95 +46,89 @@ $('.zcontainer').each(function(index) {
   var offsetX = Math.round(imgOffsetX - containerOffsetX);
   var offsetY = Math.round(imgOffsetY - containerOffsetY);
   if (allowZoom) {
-    // image.one( "click", function(e) {
-    image.click(function(e) {
+    image.one( "click", function(e) {
+      $(this).addClass('zimg-animated');
       var el = $(this);
-      var hammer = new Hammer(el[0], {
-            domEvents: false,
-            threshold: 0,
-            recognizers: [
-                [Hammer.Pan, {
-                    direction: Hammer.DIRECTION_ALL
-                }],
-                [Hammer.Tap]
-            ]
-        });
-      if (clicked) {
-        // $(this).css({
-        //   transform: 'translate3d(-50%, -50%, 0px) scale('+scale+')'
-        // });
-        // $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'false');
-        // hammer.off('pan');
-        // clicked = false;
+      var clickX = e.pageX - containerOffsetX - offsetX;
+      var clickY = e.pageY - containerOffsetY - offsetY;
+      var percentX = Math.round(clickX*100/currentW);
+      var percentY = Math.round(clickY*100/currentH);
+      if (imageW>maxW) {
+        var width = maxW;
       } else {
-        $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'true');
-        $(this).addClass('zimg-animated');
-        var clickX = e.pageX - containerOffsetX - offsetX;
-        var clickY = e.pageY - containerOffsetY - offsetY;
-        var percentX = Math.round(clickX*100/currentW);
-        var percentY = Math.round(clickY*100/currentH);
-        if (imageW>maxW) {
-          var width = maxW;
-        } else {
-          var width = imageW;
-        }
-        if (imageH>maxH) {
-          var height = maxH;
-        } else {
-          var height = imageH;
-        }
-        var percentMaxX = 100 - Math.round(width*100/imageW)/2;
-        var percentMinX = Math.round(width*100/imageW)/2;
-        var percentMaxY = 100 - Math.round(height*100/imageH)/2;
-        var percentMinY = Math.round(height*100/imageH)/2;
-
-        if (percentX>percentMaxX) {percentX=percentMaxX}
-        if (percentX<percentMinX) {percentX=percentMinX}
-        if (percentY>percentMaxY) {percentY=percentMaxY}
-        if (percentY<percentMinY) {percentY=percentMinY}
-
-        $(this).css({
-          transform: 'translate3d(-' + percentX + '%, -' + percentY + '%, 0) scale(1)'
-        });
-
-        var lastPosX = percentX;
-        var lastPosY = percentY;
-        var isDragging = false;
-        hammer.on('pan', function(ev) {   
-          var elem = ev.target;
-          if ( ! isDragging ) {
-            isDragging = true;
-            el.removeClass('zimg-animated');
-          }
-          var deltaX = ev.deltaX*100/imageW;
-          var deltaY = ev.deltaY*100/imageH;
-          var percentX = deltaX - lastPosX;
-          var percentY = deltaY - lastPosY;
-          if (-percentX>percentMaxX) {percentX=-percentMaxX}
-          if (-percentX<percentMinX) {percentX=-percentMinX}
-          if (-percentY>percentMaxY) {percentY=-percentMaxY}
-          if (-percentY<percentMinY) {percentY=-percentMinY}
-          el.css({
-            transform: 'translate3d('+percentX+'%, '+percentY+'%, 0px) scale(1)'
-          });
-          
-          if (ev.isFinal) {
-            isDragging = false;
-            el.addClass('zimg-animated');
-            if (-percentX>percentMaxX) {percentX=-percentMaxX}
-            if (-percentX<percentMinX) {percentX=-percentMinX}
-            if (-percentY>percentMaxY) {percentY=-percentMaxY}
-            if (-percentY<percentMinY) {percentY=-percentMinY}
-            elem.style.transform = 'translate3d('+percentX+'%, '+percentY+'%, 0px) scale(1)';
-            lastPosX = -percentX;
-            lastPosY = -percentY;
-          }
-        });
-        clicked = true;
+        var width = imageW;
       }
+      if (imageH>maxH) {
+        var height = maxH;
+      } else {
+        var height = imageH;
+      }
+      var percentMaxX = 100 - Math.round(width*100/imageW)/2;
+      var percentMinX = Math.round(width*100/imageW)/2;
+      var percentMaxY = 100 - Math.round(height*100/imageH)/2;
+      var percentMinY = Math.round(height*100/imageH)/2;
+
+      if (percentX>percentMaxX) {percentX=percentMaxX}
+      if (percentX<percentMinX) {percentX=percentMinX}
+      if (percentY>percentMaxY) {percentY=percentMaxY}
+      if (percentY<percentMinY) {percentY=percentMinY}
+
+      $(this).css({
+        transform: 'translate3d(-' + percentX + '%, -' + percentY + '%, 0) scale(1)'
+      });
+
+      t_initZoomDrag(el, percentX, percentY, percentMaxX, percentMinX, percentMaxY, percentMinY, scale);
     })
   }
   });
+}
+
+function t_initZoomDrag(el, percentX, percentY, percentMaxX, percentMinX, percentMaxY, percentMinY, scale) {
+  var hammer = new Hammer(el[0], {
+      domEvents: !0,
+      threshold: 0,
+      recognizers: [
+          [Hammer.Pan, {
+              direction: Hammer.DIRECTION_ALL
+          }],
+          [Hammer.Tap]
+      ]
+  });
+  hammer.on('pan', handleDrag).on('tap', stopDrag);
+  var lastPosX = percentX;
+  var lastPosY = percentY;
+  var isDragging = false;
+  function handleDrag(ev) {
+    var elem = ev.target;
+    if ( ! isDragging ) {
+      isDragging = true;
+      el.removeClass('zimg-animated');
+    }
+    var posX = ev.deltaX + lastPosX;
+    var posY = ev.deltaY + lastPosY;
+    var percentX = (ev.deltaX / $('.zcontainer').width() * 100)-lastPosX;
+    var percentY = (ev.deltaY / $('.zcontainer').width() * 100)-lastPosY;
+
+    elem.style.transform = 'translate3d('+percentX+'%, '+percentY+'%, 0px) scale(1)';
+    console.log(posX)
+    
+    if (ev.isFinal) {
+      isDragging = false;
+      el.addClass('zimg-animated');
+      if (-percentX>percentMaxX) {percentX=-percentMaxX}
+      if (-percentX<percentMinX) {percentX=-percentMinX}
+      if (-percentY>percentMaxY) {percentY=-percentMaxY}
+      if (-percentY<percentMinY) {percentY=-percentMinY}
+      elem.style.transform = 'translate3d('+percentX+'%, '+percentY+'%, 0px) scale(1)';
+      lastPosX = -percentX;
+      lastPosY = -percentY;
+    }
+  }
+  function stopDrag(ev) {
+    var elem = ev.target;
+    elem.style.transform = 'translate3d(-50%, -50%, 0px) scale('+scale+')';
+    hammer.off('pan', handleDrag).off('tap', stopDrag);
+  }
 }
 
 function t_showZoom() {
