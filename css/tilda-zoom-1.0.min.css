@@ -41,8 +41,10 @@
     display: block;
 }
 
-.t-slds__arrow_wrapper {
-    width: 40px !important;
+#reczoom .t-slds__arrow_wrapper {
+    width: 40px;
+    height: 100% !important;
+    z-index: 99;
 }
 
 
@@ -105,52 +107,6 @@
 .t-zoomable {
     cursor: -webkit-zoom-in;
     cursor: zoom-in
-}
-
-.t-zoomer__show .t-zoomable,
-.t-zoomer__show .t-carousel__zoomer__inner {
-    cursor: -webkit-zoom-out;
-    cursor: zoom-out
-}
-
-.t-zoomer__container {
-    z-index: 99999999
-}
-
-.t-carousel__zoomed,
-.t-carousel__zoomer__slides,
-.t-carousel__zoomer__inner,
-.t-carousel__zoomer__item,
-.t-carousel__zoomer__wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0
-}
-
-.t-carousel__zoomer__inner {
-    top: 15px;
-    right: 15px;
-    bottom: 15px;
-    left: 15px
-}
-
-.t-carousel__zoomer__img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    overflow: auto
-}
-
-.t-carousel__zoomer__item {
-    height: 100%;
-    display: none
 }
 
 .t-zoomer__close {
@@ -251,6 +207,23 @@
 .t-carousel__zoomer__arrow_left {
     border-left: 2px solid;
     border-bottom: 2px solid
+}
+
+@media screen and (max-width:960px) {
+  .t-zoomer__container {
+  top: 40px;
+  right: 0;
+  left: 0;
+  bottom: 40px;
+  }
+  .t-zoomer__close-line {
+    height: 20px;
+  }
+  .t-zoomer__close {
+    width: 23px;
+    height: 22px;
+    top: 10px;
+  }
 }
 
 @media screen and (max-width:768px) {
