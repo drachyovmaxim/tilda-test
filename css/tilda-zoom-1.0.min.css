@@ -58,6 +58,10 @@
     z-index: 99;
 }
 
+.reczoom-mobile .t-slds__arrow_wrapper {
+  display: none !important;
+}
+
 
 
 
@@ -96,6 +100,13 @@
     left: 40px;
     bottom: 40px
 }
+
+.reczoom-mobile .t-zoomer__container {
+  top: 40px;
+  right: 0;
+  left: 0;
+  bottom: 40px;
+  }
 
 .t-zoomer__comments {
     position: absolute;
@@ -221,12 +232,6 @@
 }
 
 @media screen and (max-width:960px) {
-  .t-zoomer__container {
-  top: 40px;
-  right: 0;
-  left: 0;
-  bottom: 40px;
-  }
   .t-zoomer__close-line {
     height: 20px;
   }
