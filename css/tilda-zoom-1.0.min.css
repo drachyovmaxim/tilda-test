@@ -31,7 +31,8 @@
 
 
 .zimg-animated {
-  transition: transform cubic-bezier(0.4, 0, 0.22, 1) .4s;
+  // transition: transform cubic-bezier(0.4, 0, 0.22, 1) .4s;
+  transition: transform ease-out .3s;
 }
 
 .zcontainer {
