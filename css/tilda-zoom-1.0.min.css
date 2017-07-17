@@ -32,7 +32,7 @@
 
 .zimg-animated {
   // transition: transform cubic-bezier(0.4, 0, 0.22, 1) .4s;
-  transition: transform ease-out .3s;
+  transition: transform ease-out .4s;
 }
 
 .zcontainer {
@@ -106,7 +106,7 @@
   top: 40px;
   right: 0;
   left: 0;
-  bottom: 40px;
+  bottom: 0;
   }
 
 .t-zoomer__comments {
