@@ -1,3 +1,5 @@
+last zoom
+
 function t_initZoom() {
   // if ($('[data-zoomable="yes"]').length) {
   //   $('[data-zoomable="yes"]').addClass("t-zoomable");
@@ -106,7 +108,6 @@ function t_initZoom() {
             if (!defaultScale) {
               coorMaxX = maxW - maxW*zoomedScale/scale;
               coorMaxY = maxH - maxH*zoomedScale/scale;
-              console.log(coorMaxY)
             }
   
             if (coorX<coorMaxX) {coorX=coorMaxX}
