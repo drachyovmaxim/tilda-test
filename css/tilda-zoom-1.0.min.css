@@ -16,8 +16,6 @@
   z-index: 2;
   transform-origin: 0 0;
   will-change: transform;
-  // cursor: -webkit-zoom-in;
-  // cursor: zoom-in
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
