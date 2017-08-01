@@ -107,7 +107,7 @@
 }
 
 .reczoom-mobile .t-zoomer__container {
-  top: 0;
+  top: 40px;
   right: 0;
   left: 0;
   bottom: 0;
