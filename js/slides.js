@@ -41,12 +41,12 @@ function t_sldsInit(recid) {
 
     if( el.find('.t-slds__item[data-slide-index=0]').length == 0 ) {
       firstSlide.before(lastSlide.clone(!0).attr('data-slide-index', '0'));
-      firstSlide.before().find('.t-zoomable').removeClass("t-zoomable");
-      console.log(firstSlide.before().find('.t-zoomable'))
+      el.find('.t-slds__item[data-slide-index=0]').find('.t-zoomable').removeClass("t-zoomable");
     }
 
     if( el.find('.t-slds__item[data-slide-index='+ (totalSlides + 1) +']').length == 0 ) {
       lastSlide.after(firstSlide.clone(!0).attr('data-slide-index', totalSlides+1).removeClass('t-slds__item_active'));
+      el.find('.t-slds__item[data-slide-index='+ (totalSlides + 1) +']').find('.t-zoomable').removeClass("t-zoomable");
     }
 
     t_slds_SliderWidth(recid);
