@@ -41,6 +41,8 @@ function t_sldsInit(recid) {
 
     if( el.find('.t-slds__item[data-slide-index=0]').length == 0 ) {
       firstSlide.before(lastSlide.clone(!0).attr('data-slide-index', '0'));
+      firstSlide.before().find('.t-zoomable').removeClass("t-zoomable");
+      console.log(firstSlide.before().find('.t-zoomable'))
     }
 
     if( el.find('.t-slds__item[data-slide-index='+ (totalSlides + 1) +']').length == 0 ) {
