@@ -1,5 +1,3 @@
-last zoom
-
 function t_initZoom() {
   // if ($('[data-zoomable="yes"]').length) {
   //   $('[data-zoomable="yes"]').addClass("t-zoomable");
@@ -21,6 +19,7 @@ function t_initZoom() {
   t_sldsInit('zoom');
 
   $('.zcontainer').each(function(index) {
+    var element = $('#reczoom');
     var container = $(this);
     var image = $(this).find('.zimg');
     var imageW = image.width();
@@ -31,23 +30,56 @@ function t_initZoom() {
     if (imageW > maxW || imageH > maxH) {
       var scale = Math.min(maxW / imageW, maxH / imageH);
       var zoomedScale = 1;
+      var minScale = scale;
       if (imageW < maxW || imageH < maxH) {
         zoomedScale = Math.max(maxW / imageW, maxH / imageH);
         defaultScale = false;
+        minScale = zoomedScale;
       }
       var maxScale = 1;
-      var minScale = zoomedScale;
       var allowZoom = true;
       var currentW = imageW*scale;
       var currentH = imageH*scale;
       var imgOffsetX = (maxW-currentW)/2;
       var imgOffsetY = (maxH-currentH)/2;
       var clicked = false;
-      var dragged = true;
-      var coorMaxX = 0;
-      var coorMinX = 0;
-      var coorMaxY = 0;
-      var coorMinY = 0;
+      var coorX = 0;
+      var coorY = 0;
+      var clickX = 0;
+      var clickY = 0;
+      var zoomedClickX = 0;
+      var zoomedClickY = 0;
+      var width = 0;
+      var height = 0;
+      var lastPosX = imgOffsetX;
+      var lastPosY = imgOffsetY;
+      var adjustScale = scale;
+      var currentScale = null;
+      var isDragging = false;
+      var deltaX = 0;
+      var deltaY = 0;
+      var x1 = 0;
+      var y1 = 0;
+      if (imageW>maxW) {
+        width = maxW;
+      } else {
+        width = imageW;
+      }
+      if (imageH>maxH) {
+        height = maxH;
+      } else {
+        height = imageH;
+      }
+      
+      var coorMaxX = width - imageW;
+      var coorMinX = maxW - width;
+      var coorMaxY = height - imageH;
+      var coorMinY = maxH - height;
+
+      if (!defaultScale) {
+        coorMaxX = maxW - maxW*zoomedScale/scale;
+        coorMaxY = maxH - maxH*zoomedScale/scale;
+      }
     } else {
       var scale = 1;
     }
@@ -71,45 +103,133 @@ function t_initZoom() {
           [Hammer.Pinch]
         ]
       });
-      image.click(function(e) {
-        if(dragged){
-          if (clicked) {
-            $(this).css({
-              transform: 'translate3d('+imgOffsetX+'px, '+imgOffsetY+'px, 0) scale(' + scale + ')'
-            });
-            $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'false');
-            clicked = false;
-          } else {
-            clicked = true;
-            $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'true');
-            $(this).addClass('zimg-animated');
-            var clickX = e.pageX - $(this).offset().left;
-            var clickY = e.pageY - $(this).offset().top;
-            var zoomedClickX = clickX*zoomedScale/scale;
-            var zoomedClickY = clickY*zoomedScale/scale;
-            var coorX = clickX - zoomedClickX + imgOffsetX;
-            var coorY = clickY - zoomedClickY + imgOffsetY;
 
-            if (imageW>maxW) {
-              var width = maxW;
-            } else {
-              var width = imageW;
-            }
-            if (imageH>maxH) {
-              var height = maxH;
-            } else {
-              var height = imageH;
-            }
-            
-            var coorMaxX = width - imageW;
-            var coorMinX = maxW - width;
-            var coorMaxY = height - imageH;
-            var coorMinY = maxH - height;
-            if (!defaultScale) {
-              coorMaxX = maxW - maxW*zoomedScale/scale;
-              coorMaxY = maxH - maxH*zoomedScale/scale;
-            }
-  
+      hammer.on('tap', function(ev) {
+        if (clicked) {
+          image.css({
+            transform: 'translate3d('+imgOffsetX+'px, '+imgOffsetY+'px, 0) scale(' + scale + ')'
+          });
+          $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'false');
+          lastPosX = imgOffsetX;
+          lastPosY = imgOffsetY;
+          adjustScale = scale;
+          clicked = false;
+        } else {
+          clicked = true;
+          $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'true');
+          image.addClass('zimg-animated');
+          clickX = ev.center.x - image.offset().left;
+          clickY = ev.center.y - (image.offset().top - element.offset().top);
+          zoomedClickX = clickX*zoomedScale/scale;
+          zoomedClickY = clickY*zoomedScale/scale;
+          coorX = clickX - zoomedClickX + imgOffsetX;
+          coorY = clickY - zoomedClickY + imgOffsetY;
+
+          if (coorX<coorMaxX) {coorX=coorMaxX}
+          if (coorX>coorMinX) {coorX=coorMinX}
+          if (coorY<coorMaxY) {coorY=coorMaxY}
+          if (coorY>coorMinY) {coorY=coorMinY}
+
+          if (imageW < maxW) { coorX = 0; }
+          if (imageH < maxH) { coorY = 0; }
+
+          image.css({
+            transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + zoomedScale + ')'
+          });
+
+          lastPosX = coorX;
+          lastPosY = coorY;
+          adjustScale = zoomedScale;
+        }
+      });
+
+      // hammer.on('pinch', function(ev) {
+      //   $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'true');
+      //   image.removeClass('zimg-animated');
+      //   currentScale = adjustScale * ev.scale;
+      //   if (currentScale>maxScale) { currentScale=maxScale }
+      //   if (currentScale<minScale) { currentScale=minScale }
+
+      //   if (ev.pointers[0].clientX > ev.pointers[1].clientX) {
+      //     x1 = ev.pointers[0].clientX - (ev.pointers[0].clientX - ev.pointers[1].clientX)/2 - imgOffsetX;
+      //   } else {
+      //     x1 = ev.pointers[1].clientX - (ev.pointers[1].clientX - ev.pointers[0].clientX)/2 - imgOffsetX;
+      //   }
+      //   if (ev.pointers[0].clientY > ev.pointers[1].clientY) {
+      //     y1 = ev.pointers[0].clientY - (ev.pointers[0].clientY - ev.pointers[1].clientY)/2 - imgOffsetY;
+      //   } else {
+      //     y1 = ev.pointers[1].clientY - (ev.pointers[1].clientY - ev.pointers[0].clientY)/2 - imgOffsetY;
+      //   }
+
+      //   // if (maxW>imageW*currentScale) {
+      //   //   coorX = x1 - x1*currentScale - lastPosX*currentScale;
+      //   //   console.log('width')
+      //   // } else {
+      //     coorX = x1 - x1*currentScale + lastPosX*currentScale;
+      //   // }
+
+      //   // if (maxH>imageH*currentScale) {
+      //   //   coorY = y1 - y1*currentScale - lastPosY*currentScale;
+      //   //   console.log('height')
+      //   // } else {
+      //     coorY = y1 - y1*currentScale + lastPosY*currentScale;
+      //   // }
+
+      //   image.css({
+      //     transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
+      //   });
+      // });
+
+      // hammer.on("pinchend", function (ev) {
+      //   adjustScale = currentScale;
+      //   lastPosX = coorX;
+      //   lastPosY = coorY;
+
+      //   image.addClass('zimg-animated').css({
+      //     transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
+      //   });
+
+      //   // $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'false');
+      //   // if (currentScale<minScale*1.5) {
+      //   //   console.log(currentScale,minScale*2)
+      //   //   if (!image.hasClass('zimg-animated')) {
+      //   //     image.addClass('zimg-animated');
+      //   //   }
+      //   //   image.css({
+      //   //     transform: 'translate3d('+imgOffsetX+'px, '+imgOffsetY+'px, 0) scale(' + scale + ')'
+      //   //   });
+      //   //   $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'false');
+      //   //   clicked = false;
+      //   //   dragged = true;
+      //   //   hammer.off('pan pinch pinchend tap');
+      //   // }
+      // });
+
+      hammer.on('pan', function(ev) {
+        if (clicked) {
+          if ( ! isDragging ) {
+            isDragging = true;
+            image.removeClass('zimg-animated').addClass('z-img-dragable');
+          }
+          currentScale = adjustScale * ev.scale;
+          deltaX = ev.deltaX;
+          deltaY = ev.deltaY;
+          coorX = lastPosX * currentScale + deltaX * currentScale;
+          coorY = lastPosY * currentScale + deltaY * currentScale;
+
+          image.css({
+            transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
+          });
+
+          if (ev.isFinal) {
+            isDragging = false;
+            image.addClass('zimg-animated').removeClass('z-img-dragable');
+            coorX = coorX + ev.velocityX*100;
+            coorY = coorY + ev.velocityY*100; 
+            image.css({
+              transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
+            });
+
             if (coorX<coorMaxX) {coorX=coorMaxX}
             if (coorX>coorMinX) {coorX=coorMinX}
             if (coorY<coorMaxY) {coorY=coorMaxY}
@@ -118,83 +238,14 @@ function t_initZoom() {
             if (imageW < maxW) { coorX = 0; }
             if (imageH < maxH) { coorY = 0; }
 
-            $(this).css({
-              transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + zoomedScale + ')'
+            image.css({
+              transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
             });
-
-            var adjustScale = 1;
-            var currentScale = null;
-            var lastPosX = coorX;
-            var lastPosY = coorY;
-            var isDragging = false;
-            var deltaX = 0;
-            var deltaY = 0;
-            var coorX = 0;
-            var coorY = 0;
-            hammer.on('pan pinch', function(ev) {
-              if ( ! isDragging ) {
-                isDragging = true;
-                image.removeClass('zimg-animated');
-              }
-              currentScale = adjustScale * ev.scale;
-              if (currentScale>maxScale) {currentScale=maxScale}
-              if (currentScale<minScale) {currentScale=minScale}
-              deltaX = ev.deltaX;
-              deltaY = ev.deltaY;
-              coorX = lastPosX * currentScale + deltaX * currentScale;
-              coorY = lastPosY * currentScale + deltaY * currentScale;
-              image.css({
-                transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
-              });
-
-              if (ev.isFinal) {
-                isDragging = false;
-                image.addClass('zimg-animated');
-                coorX = coorX + ev.velocityX*100;
-                coorY = coorY + ev.velocityY*100; 
-                image.css({
-                  transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
-                });
-
-                if (coorX<coorMaxX) {coorX=coorMaxX}
-                if (coorX>coorMinX) {coorX=coorMinX}
-                if (coorY<coorMaxY) {coorY=coorMaxY}
-                if (coorY>coorMinY) {coorY=coorMinY}
-
-                if (imageW < maxW) { coorX = 0; }
-                if (imageH < maxH) { coorY = 0; }
-
-                image.css({
-                  transform: 'translate3d(' + coorX + 'px, ' + coorY + 'px, 0) scale(' + currentScale + ')'
-                });
-                lastPosX = coorX;
-                lastPosY = coorY;
-                dragged = false;
-              }
-            });
-            // hammer.on("pinchend", function (ev) {
-            //   adjustScale = currentScale;
-            //   if (currentScale<minScale*1.5) {
-            //     console.log(currentScale,minScale*2)
-            //     if (!image.hasClass('zimg-animated')) {
-            //       image.addClass('zimg-animated');
-            //     }
-            //     image.css({
-            //       transform: 'translate3d('+imgOffsetX+'px, '+imgOffsetY+'px, 0) scale(' + scale + ')'
-            //     });
-            //     $('#reczoom .t-slds__items-wrapper').attr('data-slider-stop', 'false');
-            //     clicked = false;
-            //     dragged = true;
-            //     hammer.off('pan pinch pinchend tap');
-            //   }
-            // });
-            hammer.on('tap', function(ev) {
-              dragged = true;
-              hammer.off('pan pinch pinchend tap');
-            });
+            lastPosX = coorX;
+            lastPosY = coorY;
           }
         }
-      })
+      });
     }
   });
 }
